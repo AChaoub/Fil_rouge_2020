@@ -1,0 +1,489 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+$fontP: 'Nunito Sans';
+$color1:#FF5F00;
+
+@import 'header';
+
+@mixin EmplacP() {
+    width: 70%;
+    margin-left: 15%;
+    background-color: white;
+}
+
+@mixin Placeholder() {
+    &::placeholder {
+        color: black;
+        font-size: 14px;
+        margin-top: -5px;
+        font-family: $fontP;
+    }
+}
+
+.blank {
+    width: auto;
+    height: 20px;
+}
+
+#imgP {
+    width: auto;
+    height: 250px;
+    background-color: white;
+    border-top: solid $color1 8px;
+    // @include FlexR();
+    // justify-content: space-around;
+
+    img {
+        width: 100%;
+        height: 250px;
+        // margin-left: 35%;
+    }
+}
+
+span {
+
+    color: white;
+}
+
+#Conts {
+    @include EmplacP();
+    @include FlexR();
+    height: auto;
+    background-color: $color1;
+    color: white;
+
+    #Par1 {
+        margin: auto 5%;
+        width: 90%;
+        font-family: $fontP;
+        font-weight: normal;
+
+
+        h1 {
+            font-weight: 100;
+        }
+
+        h3 {
+            font-weight: 200;
+        }
+    }
+
+    #Par2 {
+        width: 90%;
+        font-family: $fontP;
+        font-weight: normal;
+        margin-left: 5%;
+        margin-top: 2.5%;
+
+        p {
+            line-height: 200%;
+            font-size: 16px;
+        }
+    }
+}
+
+#Form {
+    @include EmplacP();
+    height: auto;
+    background-color: $color1;
+
+
+    img {
+        width: 100%;
+        height: 90px;
+    }
+
+    #div2 {
+        @include FlexR();
+        margin-left: 4%;
+        width: 100%;
+        height: 50px;
+
+        #N {
+            width: 45%;
+            font-family: $fontP;
+            @include Placeholder();
+        }
+
+        #P {
+            width: 46%;
+            margin-left: .5%;
+            font-family: $fontP;
+            @include Placeholder();
+        }
+    }
+
+    .In {
+        margin-left: 4%;
+        width: 92%;
+        height: 50px;
+        @include Placeholder();
+    }
+
+    #Cpass,
+    #CEmail {
+        background-color: rgba(218, 103, 10, 0.486);
+        border: none;
+        pointer-events: none;
+    }
+
+    .IMGUP {
+        background-color: white;
+        margin-left: 4%;
+        width: 92%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+
+        #Upload_img {
+            height: 20px;
+
+            input {
+                width: 100%;
+                height: 50px;
+            }
+        }
+    }
+
+
+
+}
+
+#DateN {
+    @include EmplacP();
+    height: 180px;
+    background-color: $color1;
+    color: white;
+
+
+    #p1 {
+        font-family: $fontP;
+        font-size: 24px;
+        margin-left: 5%;
+
+    }
+
+    #p2 {
+        font-family: $fontP;
+        font-size: 14px;
+        margin-left: 5%;
+    }
+
+    p {
+        font-family: $fontP;
+        font-size: 14px;
+        margin-left: 5%;
+    }
+
+    .div3 {
+        @include FlexR();
+        width: 100%;
+        margin-left: 2.5%;
+    }
+
+    .Annee {
+        width: 30%;
+
+        .Selec {
+            width: 92%;
+            margin-left: 4%;
+            height: 50px;
+        }
+    }
+
+    p {
+        font-size: 12px;
+        font-family: $fontP;
+        margin-left: 25%;
+    }
+
+}
+
+
+#polit {
+    font-size: 15px;
+    font-family: $fontP;
+    margin-left: 15%;
+
+    .Acc {
+        color: $color1;
+        text-decoration: underline;
+    }
+}
+
+
+#radio {
+    margin-left: 15%;
+    color: $color1;
+
+    input[type=radio]:checked {
+        color: $color1;
+
+    }
+
+    #RadioPar {
+        font-size: 15px;
+        font-family: $fontP;
+    }
+
+    .Acc {
+        color: $color1;
+        text-decoration: underline;
+    }
+
+}
+
+#BtnAd {
+    width: 25%;
+    height: 50px;
+    margin-left: 60%;
+    font-size: 24px;
+    font-family: $fontP;
+    background-color: white;
+    color: $color1;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    &:hover {
+        background-color: $color1;
+        color: white;
+        font-size: 24px;
+        transform: scale(0.95);
+        -webkit-transform: scale(0.95);
+        -moz-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+        -o-transform: scale(0.95);
+        // border-style: none;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+}
+
+.Upper {
+    font-family: $fontP;
+}
+
+@mixin StyleParagVerf() {
+    @for $i from 1 through 6 {
+        #ParagVerf#{$i} {
+            font-family: $fontP;
+            font-size: 12px;
+            margin-left: 5%;
+        }
+    }
+}
+
+@include StyleParagVerf();
+
+// .sincrire {
+//     display: none;
+//     width: 80%;
+//     height: 100%;
+//     background-color: rgba(0, 0, 0, 0.808);
+//     position: absolute;
+//     top: 0;
+//     z-index: 188;
+
+//     #logoInscrip {
+//         width: 60%;
+//         height: 100px;
+//         background-color: white;
+//         margin-left: 20%;
+//         margin-top: 7.5%;
+
+//         img {
+//             margin-left: 5%;
+//             width: 40%;
+//             height: 100px;
+//             float: left;
+//         }
+
+//         a {
+//             font-size: 20px;
+//             font-family: $font;
+//             margin-left: 43%;
+//             color: $color;
+//             margin-top: 90px;
+//             list-style-type: none;
+//             text-decoration: none;
+//             cursor: pointer;
+//         }
+//     }
+
+//     #Inscrip {
+//         width: 60%;
+//         height: 400px;
+//         margin-left: 20%;
+//         padding-left: 5%;
+//         @include FlexR();
+//         background-color: Black;
+
+
+//         #pan1 {
+//             width: 60%;
+//             background-color: black;
+//             color: White;
+
+//             p {
+//                 // margin-left: 10%;
+//                 font-size: 18px;
+//                 font-family: $font;
+//             }
+
+//             .input {
+//                 // margin-left: 10%;
+//                 width: 70%;
+//                 height: 30px;
+//                 font-size: 18px;
+//                 font-family: $font;
+//             }
+
+//             #check {
+//                 float: left;
+//                 // margin: 0;
+//                 width: 20px;
+//             }
+
+//             label {
+//                 font-size: 18px;
+//                 font-family: $font;
+//                 margin-left: 2%;
+//             }
+
+//             #SeConn {
+//                 color: black;
+//                 width: 80%;
+//                 height: 40px;
+//                 border-radius: 5px;
+//                 background-color: $color;
+//                 font-family: $font;
+//                 font-size: 18px;
+//                 font-weight: 600;
+//                 border-style: none;
+//                 cursor: pointer;
+//             }
+//         }
+
+//         #pan2 {
+//             width: 40%;
+//             background-color: $color;
+//             color: white;
+
+//             p {
+//                 //margin-left: 10%;
+//                 text-align: center;
+//                 font-size: 24px;
+//                 font-family: $font;
+//             }
+
+//             #p1 {
+//                 font-size: 18px;
+//                 text-align: start;
+//                 margin-left: 10%;
+//             }
+
+//             ul {
+//                 margin-left: 10%;
+
+//                 li {
+//                     font-size: 18px;
+//                     text-align: start;
+//                     margin-left: 10%;
+//                     font-family: $font;
+//                     color: white;
+//                     padding-top: 20px;
+
+//                 }
+//             }
+
+//             #Adherer {
+//                 color: $color;
+//                 width: 80%;
+//                 height: 40px;
+//                 border-radius: 5px;
+//                 background-color: black;
+//                 font-family: $font;
+//                 font-size: 18px;
+//                 font-weight: 600;
+//                 margin-left: 10%;
+//                 border-style: none;
+//                 cursor: pointer;
+
+//             }
+//         }
+//     }
+// }
+
+
+
+// @media screen and (max-width:850px) {
+//     #Footer {
+//         #parts4 {
+//             display: none;
+//         }
+//     }
+// }
+
+
+
+// @media screen and (max-width:1175px) {
+//     #NavBar-Mobile {
+//         display: none;
+//     }
+
+//     .d1 {
+//         display: flex;
+//     }
+// }
+
+// 
+// @media screen and (max-width:850px) {
+//     #NavBar-Mobile #nav-menu {
+//         left: 73%;
+//         margin-top: 10%;
+//         width: 27%;
+//     }
+
+//     #NavBar-Mobile {
+//         display: flex;
+//     }
+
+//     .d1 {
+//         display: none;
+//     }
+
+//     #Footer {
+//         #parts4 {
+//             display: none;
+//         }
+//     }
+// }
+
+// // 
+// @media screen and (max-width:670px) {
+//     #NavBar-Mobile #nav-menu {
+//         left: 67%;
+//         margin-top: 10%;
+//         width: 32%;
+//     }
+
+//     #NavBar-Mobile {
+//         display: flex;
+//     }
+
+//     .d1 {
+//         display: none;
+//     }
+// }

@@ -1,0 +1,119 @@
+<?php
+// include('DB_conn.php');
+$conn = new mysqli("localhost", "root", "", "locar");
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = " SELECT * FROM `voiture` ,marque , categorie WHERE voiture.id_Marque = marque.id_Marque and voiture.id_cat  = categorie.id_cat ";
+
+if (isset($_POST['marque'])) {
+    if ($_POST['marque'] != 'full') {
+        $marque = $_POST['marque'];
+        $sql .= "AND marque.libelle ='$marque' ";
+    }
+}
+if (isset($_POST['carburant'])) {
+    if ($_POST['carburant'] != "tout") {
+        $carb = $_POST['carburant'];
+        $sql .= "AND voiture.carburant = '$carb'";
+    }
+}
+
+if (isset($_POST['range_1']) && isset($_POST['range_2'])) {
+    $min = $_POST['range_1'];
+    $max = $_POST['range_2'];
+    $sql .= "AND prix BETWEEN $min AND $max";
+}
+echo $_POST['categorie'];
+if (isset($_POST['categorie'])) {
+    $cat =  $_POST['categorie'];
+    if ($cat != "TT") {
+        $sql .= " AND categorie.libelle='$cat'";
+    }
+}
+
+
+
+$resultat = $conn->query($sql);
+$rows  = mysqli_num_rows($resultat);
+if ($rows == 0) {
+    echo '<script>alert("Aucune voiture correspond a votre recherche")</script>';
+} else {
+    while ($ligne = $resultat->fetch_assoc()) {
+
+        echo '<div class="Voiture">
+            <div id="img_V"><img src="../IMG/Img_voiture/' . $ligne['img_v'] . '.png" alt=""></div>
+            <div id="Des_VB">
+                <div id="Des_V">
+    
+                    <div id="Z1">
+                        <div class="zone_separ_blanc zone_separ"></div>
+                        <p>FIAT 500C</p>
+                        <div class="zone_separ_blanc zone_separ"></div>
+                        <span>' . $ligne['descrip'] . '</span>
+                    </div>
+                    <div id="Z2">
+                        <div id="prix">
+                            <p>PRIX : ' . $ligne['prix'] . ' DHS</p>
+                        </div>
+                        <div class>
+                            <input type="button" value="RESERVER">
+                        </div>
+                    </div>
+                </div>
+                <div id="Des_B">
+                    <div class="Icones">
+                        <div class="icone" id="icone1">
+                            <div class="imgI">
+                                <img src="../IMG/Img_Site/car-door-black.png" alt="">
+                            </div>
+                            <div class="pI">
+                                <p>PORTES</p>
+                                <p>' . $ligne['Nb_portes'] . '</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Icones">
+                        <div class="icone" id="icone1">
+                            <div class="imgI">
+                                <img src="../IMG/Img_Site/travel-black.png" alt="">
+                            </div>
+                            <div class="pI">
+                                <p>BAGAGES</p>
+                                <p>' . $ligne['bagage'] . '</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Icones">
+                        <div class="icone" id="icone1">
+                            <div class="imgI">
+                                <img src="../IMG/Img_Site/freezer.png" alt="">
+                            </div>
+                            <div class="pI">
+                                <p>CLIMATISATION</p>
+                                <p>' . $ligne['clim'] . '</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Icones">
+                        <div class="icone" id="icone1">
+                            <div class="imgI">
+                                <img src="../IMG/Img_Site/transmission.png" alt="">
+                            </div>
+                            <div class="pI">
+                                <p>TRANSMISSION</p>
+                                <p>' . $ligne['transmission'] . '</p>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                </div>
+            </div>
+        </div>
+        <div class="zone_separ_blanc zone_separ"></div>';
+    }
+}
+
+$conn->close();

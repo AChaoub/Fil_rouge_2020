@@ -1,0 +1,709 @@
+@import 'header';
+
+#ShowCars {
+    background-color: black;
+    width: 100%;
+    height: auto;
+    @include Parag_prin();
+    align-items: center;
+
+    @media screen and(max-width:1024px) {
+        font-size: 30px;
+    }
+
+    #Slides_Car {
+        background-color: black;
+        width: 100%;
+        height: 300px;
+        @include FlexR();
+        @include Navig();
+
+        @media screen and(max-width:425px) {
+            @include FlexR();
+            flex-wrap: wrap;
+            height: auto;
+        }
+
+        #InfosCar1 {
+            width: 30%;
+            height: 100%;
+
+            @media screen and(max-width:1440px) {
+                width: 27%;
+                // background-color: purple;
+            }
+
+            @media screen and(max-width:1024px) {
+                width: 25%;
+                // background-color: purple;
+            }
+
+            @media screen and(max-width:425px) {
+                width: 50%;
+
+            }
+
+            #Categorie {
+                margin-left: 10%;
+                color: white;
+
+                @media screen and(max-width:1440px) {
+                    margin-left: 7.5%;
+                }
+
+                @media screen and(max-width:425px) {
+                    width: 100%;
+                }
+            }
+
+            .P_infos {
+                margin-left: 10%;
+                font-size: 31px;
+                font-weight: 800;
+                color: white;
+
+                @media screen and(max-width:1440px) {
+                    margin-left: 7.5%;
+                }
+
+                @media screen and(max-width:425px) {
+                    width: 100%;
+                }
+
+            }
+
+            #tiré {
+                margin-left: 10%;
+                width: 70px;
+                height: 9px;
+                background-color: $color;
+
+                @media screen and(max-width:1440px) {
+                    margin-left: 7.5%;
+                }
+            }
+
+            #Prix {
+                color: white;
+                margin-left: 10%;
+                font-size: 29px;
+                letter-spacing: 1px;
+                float: left;
+
+                @media screen and(max-width:1440px) {
+                    margin-left: 7.5%;
+                    font-size: 25px;
+                }
+
+                @media screen and(max-width:1024px) {
+                    font-size: 20px;
+                    margin-left: 5%;
+                }
+
+                @media screen and(max-width:425px) {
+                    width: 100%;
+                    font-size: 15px;
+                }
+            }
+
+            #Day {
+                letter-spacing: 1px;
+                color: white;
+
+                @media screen and(max-width:1440px) {
+                    margin-left: 7.5%;
+                    font-size: 25px;
+                }
+
+                @media screen and(max-width:1024px) {
+                    font-size: 20px;
+                    margin-left: 5%;
+                }
+
+                @media screen and(max-width:425px) {
+                    width: 100%;
+                    font-size: 10px;
+                }
+
+            }
+
+            #BtnRes {
+                width: 270px;
+                height: 50px;
+                background-color: $color;
+                border: transparent;
+                font-weight: 700;
+                margin-left: 20%;
+
+                @media screen and(max-width:1440px) {
+                    margin-left: 15%;
+                    width: 180px;
+                }
+
+                @media screen and(max-width:1024px) {
+                    margin-left: 2.5%;
+                    width: 95%;
+                }
+
+                @media screen and(max-width:425px) {
+                    width: 100%;
+                }
+            }
+
+        }
+
+        #Affich_img {
+            width: 30%;
+            height: 100%;
+            background-color: black;
+
+            @media screen and(max-width:1440px) {
+                width: 32.5%;
+            }
+
+            @media screen and(max-width:1024px) {
+                width: 30%;
+            }
+
+            @media screen and(max-width:768px) {
+                width: 25%;
+            }
+
+            @media screen and(max-width:425px) {
+                width: 35%;
+                margin: auto 0;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+
+                @media screen and(max-width:425px) {
+                    width: 140%;
+                }
+            }
+        }
+
+        #InfosCar2 {
+            width: 30%;
+            height: 100%;
+
+            @media screen and(max-width:1440px) {
+                width: 27%;
+            }
+
+            @media screen and(max-width:1024px) {
+                width: 33%;
+            }
+
+            @media screen and(max-width:768px) {
+                width: 38%;
+            }
+
+            @media screen and(max-width:425px) {
+                // width: 100%;
+                // flex: 1;
+                // margin: 0 auto;
+                display: none;
+            }
+
+            .options {
+                width: 100%;
+                height: 20%;
+                padding: 5px 5%;
+                @include FlexR();
+
+                .Zone_opt {
+                    width: 50px;
+                    height: 50px;
+                    background-color: white;
+                    border-radius: 50px;
+                    -webkit-border-radius: 50px;
+                    -moz-border-radius: 50px;
+                    -ms-border-radius: 50px;
+                    -o-border-radius: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    @media screen and(max-width:1440px) {
+                        width: 45px;
+                        height: 45px;
+                    }
+
+                    @media screen and(max-width:1024px) {
+                        width: 40px;
+                        height: 40px;
+                    }
+
+                    @media screen and(max-width:768px) {
+                        width: 35px;
+                        height: 35px;
+                    }
+
+                    img {
+
+                        margin-left: 5%;
+                        height: 30px;
+                        width: 30px;
+
+                        @media screen and(max-width:1440px) {
+                            width: 27.5px;
+                            height: 27.5px;
+                        }
+
+                        @media screen and(max-width:1024px) {
+                            width: 25px;
+                            height: 25px;
+                        }
+
+                        @media screen and(max-width:768px) {
+                            width: 22.5px;
+                            height: 22.5px;
+                        }
+
+                    }
+                }
+
+                p {
+                    font-size: 21px;
+                    color: white;
+                    margin: auto 5%;
+
+                    @media screen and(max-width:1440px) {
+                        font-size: 17px;
+                    }
+
+                    @media screen and(max-width:1024px) {
+                        font-size: 16px;
+                    }
+
+                    @media screen and(max-width:768px) {
+                        font-size: 15px;
+                    }
+
+
+                }
+
+                span {
+                    font-size: 21px;
+                    color: $color;
+                    margin: auto 0;
+
+                    @media screen and(max-width:1440px) {
+                        font-size: 17px;
+                    }
+
+                    @media screen and(max-width:1024px) {
+                        font-size: 16px;
+                    }
+
+                    @media screen and(max-width:768px) {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+#Recherche {
+    width: 100%;
+    height: auto;
+    background-color: $color;
+    padding-top: 10px;
+
+    @media screen and(max-width:1024px) {
+        display: none;
+    }
+
+    #Parag1 {
+        p {
+            text-align: center;
+            font-size: 31px;
+            color: white;
+            font-weight: 800;
+        }
+    }
+
+    #inputs {
+
+        @include FlexR();
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        select,
+        .date,
+        input {
+            height: 50px;
+            width: 431px;
+            padding-left: 160px;
+        }
+
+        input::placeholder {
+            color: Black;
+        }
+
+        .input_container {
+            position: relative;
+        }
+
+        .input_icon {
+            position: absolute;
+            top: 2px;
+            left: 350px;
+
+            img {
+                width: 40px;
+                height: auto;
+            }
+        }
+
+    }
+
+    #Btn_Recherche {
+        display: flex;
+        justify-content: center;
+
+        input {
+            width: 350px;
+            height: 50px;
+            text-align: center;
+            background-color: white;
+            border: transparent;
+            font-size: 24px;
+            font-weight: 700;
+
+
+        }
+
+    }
+
+}
+
+#Service,
+#Propos {
+    width: 100%;
+    height: 400px;
+    @include Parag_prin();
+
+    .Zone_H {
+        .p2 {
+            font-size: 18px;
+            color: black;
+            font-weight: 100;
+            margin-top: -10px;
+
+            @media screen and(max-width:1024px) {
+                font-size: 15px;
+            }
+
+            @media screen and(max-width:768px) {
+                font-size: 13px;
+                margin-top: 0;
+            }
+
+            @media screen and(max-width:425px) {
+                font-size: 11px;
+            }
+
+        }
+
+    }
+
+    #Services {
+        @include FlexR();
+        width: 100%;
+        // justify-items: center;
+        // align-content: space-between;
+        height: auto;
+        @include Navig();
+        // align-items: end;
+
+        .Zone {
+            width: 40%;
+            height: auto;
+
+            @media screen and(max-width:1024px) {
+                width: 35%;
+                margin-left: 0%;
+            }
+
+            @media screen and(max-width:320px) {
+                width: 50%;
+                // margin-left: 20%;
+            }
+
+
+            img {
+                width: 40%;
+                height: 300px;
+                margin-left: 70%;
+
+                @media screen and(max-width:1024px) {
+                    width: 80%;
+                    margin-left: 40%;
+                }
+
+                // @media screen and(max-width:768px) {
+                //     width: 60%;
+                //     margin-left: 40%;
+                // }
+            }
+
+
+        }
+
+        #Ach {
+            width: 50%;
+            height: auto;
+
+            #descrip_S {
+                //margin-top: 200px;
+                width: 60%;
+                height: auto;
+                background-color: $color;
+                color: white;
+                text-align: start;
+
+                @media screen and(max-width:425px) {
+                    width: 80%;
+                }
+
+                @media screen and(max-width:768px) {
+                    width: 95%;
+                }
+
+                @media screen and(max-width:425px) {
+                    width: 100%;
+                }
+
+                p {
+                    text-align: center;
+                    font-size: 18px;
+                    font-weight: 600;
+
+                    @media screen and(max-width:768px) {
+                        font-size: 15px;
+                    }
+
+                    @media screen and(max-width:768px) {
+                        font-size: 12px;
+                        // margin-left: 40%;
+                    }
+                }
+
+                #Span {
+                    text-align: center;
+                    font-size: 15px;
+                    font-weight: 400;
+
+                }
+
+            }
+        }
+
+
+    }
+}
+
+#Propos {
+    height: auto;
+    width: 100%;
+
+    #Zone1 {
+        width: 60%;
+        height: 500px;
+        margin-left: 20%;
+        @include FlexR();
+        flex-wrap: nowrap;
+
+        #Des_Nav {
+            width: 60%;
+            z-index: 100;
+            margin: auto 0;
+
+            #Descrip_p {
+                width: 70%;
+                height: auto;
+                background-color: $color;
+                color: white;
+                margin: 15% 30%;
+
+                p {
+                    text-align: center;
+                    font-size: 18px;
+                    font-weight: 800;
+
+                }
+
+                #Span {
+                    text-align: center;
+                    font-size: 15px;
+                    font-weight: 400;
+
+                }
+            }
+
+            .Navig {
+                // margin-top: 25%;
+                width: 10%;
+                float: left;
+                margin-left: 15%;
+
+                .Navig1 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50px;
+                    height: 50px;
+                    background-color: white;
+                    border-radius: 50px;
+                    -webkit-border-radius: 50px;
+                    -moz-border-radius: 50px;
+                    -ms-border-radius: 50px;
+                    -o-border-radius: 50px;
+                    border: solid 1px black;
+                    margin-left: 70px;
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+
+                    }
+                }
+            }
+        }
+
+
+
+        #Zone_img_p {
+            width: 40%;
+            height: 500px;
+            background-image: url(../IMG/Img_Site/Propos.jpg);
+            background-size: cover;
+            z-index: -10;
+            margin-left: -50px;
+
+
+        }
+
+
+    }
+
+}
+
+#Contact {
+    width: 100%;
+    height: 450px;
+    background-color: $color;
+
+    @media screen and(max-width:1024px) {
+        display: none;
+    }
+
+
+    .Zone_H {
+        text-align: center;
+
+        p {
+            color: white;
+            font-size: 30px;
+        }
+
+        .p2 {
+            font-size: 16px;
+            color: white;
+            font-weight: 500;
+            margin-top: 10px;
+
+        }
+    }
+
+    .inputs {
+        display: flex;
+        justify-content: space-around;
+
+
+        input {
+            height: 40px;
+            width: 360px;
+            padding-left: 30px;
+            border: transparent;
+        }
+    }
+
+    textarea {
+        margin-left: 12.5%;
+        border: transparent;
+        // font-size: 18px;
+    }
+
+    #BtnCtn {
+        width: 270px;
+        height: 50px;
+        background-color: white;
+        border: transparent;
+        font-weight: 700;
+        color: black;
+        margin-left: 41%;
+    }
+
+}
+
+#Adresse {
+    width: 100%;
+    height: 200px;
+
+    @media screen and(max-width:1024px) {
+        display: none;
+    }
+
+    .Zone_H {
+        text-align: center;
+
+        p {
+            color: $color;
+            font-size: 30px;
+        }
+    }
+
+    #parts {
+        width: 100%;
+        height: 100px;
+        @include FlexR();
+        justify-content: space-around;
+
+
+        .Adr {
+            width: 33%;
+            @include FlexC();
+            justify-content: center;
+            align-items: center;
+
+            p {
+                color: black;
+                font-size: 20;
+                font-weight: 700;
+
+            }
+        }
+
+        #LogoSoc {
+            width: 33%;
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 200px;
+                height: 80px;
+            }
+
+
+        }
+
+    }
+
+}

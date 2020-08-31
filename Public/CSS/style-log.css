@@ -1,0 +1,1032 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: 'Nunito Sans', sans-serif;
+  width: 80%;
+  margin-left: 10%;
+}
+
+@media screen and (max-width: 1023px) {
+  body {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+
+#header {
+  height: 60px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#header #ML {
+  width: 20%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  #header #ML {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #header #ML {
+    display: none;
+  }
+}
+
+#header #ML #Menu {
+  margin: auto 10px;
+  width: 10%;
+}
+
+#header #ML #Menu img {
+  width: 30px;
+}
+
+#header #ML #Logo {
+  margin: auto 0;
+  width: 70%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  #header #ML #Logo {
+    width: 80%;
+  }
+}
+
+#header #ML #Logo img {
+  width: 100%;
+  height: 50px;
+}
+
+@media screen and (max-width: 1024px) {
+  #header #ML #Logo img {
+    width: 80%;
+  }
+}
+
+#header #RCP {
+  width: 80%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  #header #RCP {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #header #RCP {
+    display: none;
+  }
+}
+
+#header #RCP #Espace {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  margin: 0 auto;
+}
+
+#header #RCP #Espace span {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 900;
+  font-family: "Nunito Sans";
+}
+
+@media screen and (max-width: 1024px) {
+  #header #RCP #Espace span {
+    font-size: 16px;
+  }
+}
+
+#header #RCP #Espace span a {
+  text-decoration: none;
+  color: #000;
+}
+
+#header #RCP #Con {
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header #RCP #Con #Lgn,
+#header #RCP #Con #Cnx {
+  width: 50%;
+  border-right: solid 1px black;
+  margin: 0 auto;
+}
+
+#header #RCP #Con #Lgn span,
+#header #RCP #Con #Cnx span {
+  font-size: 18px;
+  font-weight: 800;
+  font-family: "Nunito Sans";
+}
+
+@media screen and (max-width: 1024px) {
+  #header #RCP #Con #Lgn span,
+  #header #RCP #Con #Cnx span {
+    font-size: 16px;
+  }
+}
+
+#header #RCP #Con #Lgn span a,
+#header #RCP #Con #Cnx span a {
+  text-decoration: none;
+  color: #000;
+}
+
+#header #RCP #Con #Prf {
+  width: 33%;
+  margin-left: 5%;
+}
+
+#header #RCP #Con #Prf img {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+}
+
+#header .MenuResp {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  #header .MenuResp {
+    width: 100%;
+    height: 60px;
+    display: block;
+    background-color: white;
+  }
+}
+
+#header .MenuResp div #check {
+  display: none;
+}
+
+#header .MenuResp div #check:not(:checked) ~ .MenuVer {
+  display: none;
+}
+
+#header .MenuResp div #check:checked ~ .MenuVer {
+  display: block;
+}
+
+#header .MenuResp div .MenuRF {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header .MenuResp div .MenuRF .menuimg {
+  width: 40px;
+  height: auto;
+  margin: 0 auto;
+}
+
+#header .MenuResp div .MenuRF .logo {
+  width: 50%;
+  height: auto;
+}
+
+#header .MenuResp div .MenuVer {
+  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 60%;
+  height: auto;
+  background-color: #FF5F00;
+  opacity: 0.9;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#header .MenuResp div .MenuVer .MV {
+  height: 30px;
+  margin: auto 0;
+  border-top: solid 2px white;
+}
+
+#header .MenuResp div .MenuVer .MV > a {
+  color: white;
+  text-decoration: none;
+  list-style-type: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: montserrat;
+}
+
+#Gestion_admin {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Nunito Sans";
+  color: Black;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#Gestion_admin .Gs {
+  width: 20%;
+}
+
+#Gestion_admin .Gs a {
+  text-decoration: none;
+  color: Black;
+}
+
+#Gestion_admin #A1 {
+  background-color: white;
+  opacity: 0.6;
+}
+
+#Gestion_admin #A1:hover {
+  background-color: #FF5F00;
+  opacity: 0.9;
+}
+
+#Gestion_admin #A2 {
+  background-color: white;
+  opacity: 0.6;
+}
+
+#Gestion_admin #A2:hover {
+  background-color: #FF5F00;
+  opacity: 0.9;
+}
+
+#Gestion_admin #A3 {
+  background-color: white;
+  opacity: 0.6;
+}
+
+#Gestion_admin #A3:hover {
+  background-color: #FF5F00;
+  opacity: 0.9;
+}
+
+#Gestion_admin #A4 {
+  background-color: white;
+  opacity: 0.6;
+}
+
+#Gestion_admin #A4:hover {
+  background-color: #FF5F00;
+  opacity: 0.9;
+}
+
+#Gestion_admin #A5 {
+  background-color: white;
+  opacity: 0.6;
+}
+
+#Gestion_admin #A5:hover {
+  background-color: #FF5F00;
+  opacity: 0.9;
+}
+
+.zone_separ {
+  width: 100%;
+  height: 41px;
+}
+
+.zone_separR {
+  width: 100%;
+  height: 35px;
+}
+
+.zone_separ_noir {
+  background-color: black;
+}
+
+.zone_separ_color {
+  background-color: #FF5F00;
+}
+
+.zone_separ_blanc {
+  background-color: white;
+}
+
+#Footer {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#Footer #Coopy {
+  width: 30%;
+}
+
+#Footer #Coopy p {
+  color: black;
+  font-size: 15px;
+}
+
+#Footer #RxS {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#Footer #RxS .Rs {
+  width: 10%;
+  height: auto;
+  background-color: #FF5F00;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#Footer #RxS .Rs img {
+  width: 30px;
+  height: 30px;
+}
+
+.blank {
+  width: auto;
+  height: 20px;
+}
+
+#sincrire {
+  display: none;
+  width: 80%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.808);
+  position: absolute;
+  top: 0;
+  z-index: 188;
+}
+
+#sincrire #logoInscrip {
+  width: 60%;
+  height: 100px;
+  background-color: white;
+  margin-left: 20%;
+  margin-top: 7.5%;
+}
+
+#sincrire #logoInscrip img {
+  margin-left: 5%;
+  width: 40%;
+  height: 100px;
+  float: left;
+}
+
+#sincrire #logoInscrip a {
+  font-size: 20px;
+  font-family: "Nunito Sans";
+  margin-left: 43%;
+  color: #FF5F00;
+  margin-top: 90px;
+  list-style-type: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#sincrire #Inscrip {
+  width: 60%;
+  height: 400px;
+  margin-left: 20%;
+  padding-left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: Black;
+}
+
+#sincrire #Inscrip #pan1 {
+  width: 60%;
+  background-color: black;
+  color: White;
+}
+
+#sincrire #Inscrip #pan1 p {
+  font-size: 18px;
+  font-family: "Nunito Sans";
+}
+
+#sincrire #Inscrip #pan1 .input {
+  width: 70%;
+  height: 30px;
+  font-size: 18px;
+  font-family: "Nunito Sans";
+}
+
+#sincrire #Inscrip #pan1 #check {
+  float: left;
+  width: 20px;
+}
+
+#sincrire #Inscrip #pan1 label {
+  font-size: 18px;
+  font-family: "Nunito Sans";
+  margin-left: 2%;
+}
+
+#sincrire #Inscrip #pan1 #SeConn {
+  color: black;
+  width: 80%;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #FF5F00;
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  font-weight: 600;
+  border-style: none;
+  cursor: pointer;
+}
+
+#sincrire #Inscrip #pan2 {
+  width: 40%;
+  background-color: #FF5F00;
+  color: white;
+}
+
+#sincrire #Inscrip #pan2 p {
+  text-align: center;
+  font-size: 24px;
+  font-family: "Nunito Sans";
+}
+
+#sincrire #Inscrip #pan2 #p1 {
+  font-size: 18px;
+  text-align: start;
+  margin-left: 10%;
+}
+
+#sincrire #Inscrip #pan2 ul {
+  margin-left: 10%;
+}
+
+#sincrire #Inscrip #pan2 ul li {
+  font-size: 18px;
+  text-align: start;
+  margin-left: 10%;
+  font-family: "Nunito Sans";
+  color: white;
+  padding-top: 20px;
+}
+
+#sincrire #Inscrip #pan2 #Adherer {
+  color: #FF5F00;
+  width: 80%;
+  height: 40px;
+  border-radius: 5px;
+  background-color: black;
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 10%;
+  border-style: none;
+  cursor: pointer;
+}
+
+.blank {
+  width: auto;
+  height: 20px;
+}
+
+#imgP {
+  width: auto;
+  height: 250px;
+  background-color: white;
+  border-top: solid #FF5F00 8px;
+}
+
+#imgP img {
+  width: 100%;
+  height: 250px;
+}
+
+span {
+  color: white;
+}
+
+#Conts {
+  width: 70%;
+  margin-left: 15%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: auto;
+  background-color: #FF5F00;
+  color: white;
+}
+
+#Conts #Par1 {
+  margin: auto 5%;
+  width: 90%;
+  font-family: "Nunito Sans";
+  font-weight: normal;
+}
+
+#Conts #Par1 h1 {
+  font-weight: 100;
+}
+
+#Conts #Par1 h3 {
+  font-weight: 200;
+}
+
+#Conts #Par2 {
+  width: 90%;
+  font-family: "Nunito Sans";
+  font-weight: normal;
+  margin-left: 5%;
+  margin-top: 2.5%;
+}
+
+#Conts #Par2 p {
+  line-height: 200%;
+  font-size: 16px;
+}
+
+#Form {
+  width: 70%;
+  margin-left: 15%;
+  background-color: white;
+  height: auto;
+  background-color: #FF5F00;
+}
+
+#Form img {
+  width: 100%;
+  height: 90px;
+}
+
+#Form #div2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 4%;
+  width: 100%;
+  height: 50px;
+}
+
+#Form #div2 #N {
+  width: 45%;
+  font-family: "Nunito Sans";
+}
+
+#Form #div2 #N::-webkit-input-placeholder {
+  color: black;
+  font-size: 14px;
+  margin-top: -5px;
+  font-family: "Nunito Sans";
+}
+
+#Form #div2 #N:-ms-input-placeholder {
+  color: black;
+  font-size: 14px;
+  margin-top: -5px;
+  font-family: "Nunito Sans";
+}
+
+#Form #div2 #N::-ms-input-placeholder {
+  color: black;
+  font-size: 14px;
+  margin-top: -5px;
+  font-family: "Nunito Sans";
+}
+
+#Form #div2 #N::placeholder {
+  color: black;
+  font-size: 14px;
+  margin-top: -5px;
+  font-family: "Nunito Sans";
+}
+
+#Form #div2 #P {
+  width: 46%;
+  margin-left: .5%;
+  font-family: "Nunito Sans";
+}
+
+#Form #div2 #P::-webkit-input-placeholder {
+  color: black;
+  font-size: 14px;
+  margin-top: -5px;
+  font-family: "Nunito Sans";
+}
+
+#Form #div2 #P:-ms-input-placeholder {
+  color: black;
+  font-size: 14px;
+  margin-top: -5px;
+  font-family: "Nunito Sans";
+}
+
+#Form #div2 #P::-ms-input-placeholder {
+  color: black;
+  font-size: 14px;
+  margin-top: -5px;
+  font-family: "Nunito Sans";
+}
+
+#Form #div2 #P::placeholder {
+  color: black;
+  font-size: 14px;
+  margin-top: -5px;
+  font-family: "Nunito Sans";
+}
+
+#Form .In {
+  margin-left: 4%;
+  width: 92%;
+  height: 50px;
+}
+
+#Form .In::-webkit-input-placeholder {
+  color: black;
+  font-size: 14px;
+  margin-top: -5px;
+  font-family: "Nunito Sans";
+}
+
+#Form .In:-ms-input-placeholder {
+  color: black;
+  font-size: 14px;
+  margin-top: -5px;
+  font-family: "Nunito Sans";
+}
+
+#Form .In::-ms-input-placeholder {
+  color: black;
+  font-size: 14px;
+  margin-top: -5px;
+  font-family: "Nunito Sans";
+}
+
+#Form .In::placeholder {
+  color: black;
+  font-size: 14px;
+  margin-top: -5px;
+  font-family: "Nunito Sans";
+}
+
+#Form #Cpass,
+#Form #CEmail {
+  background-color: rgba(218, 103, 10, 0.486);
+  border: none;
+  pointer-events: none;
+}
+
+#Form .IMGUP {
+  background-color: white;
+  margin-left: 4%;
+  width: 92%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50px;
+}
+
+#Form .IMGUP #Upload_img {
+  height: 20px;
+}
+
+#Form .IMGUP #Upload_img input {
+  width: 100%;
+  height: 50px;
+}
+
+#DateN {
+  width: 70%;
+  margin-left: 15%;
+  background-color: white;
+  height: 180px;
+  background-color: #FF5F00;
+  color: white;
+}
+
+#DateN #p1 {
+  font-family: "Nunito Sans";
+  font-size: 24px;
+  margin-left: 5%;
+}
+
+#DateN #p2 {
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  margin-left: 5%;
+}
+
+#DateN p {
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  margin-left: 5%;
+}
+
+#DateN .div3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin-left: 2.5%;
+}
+
+#DateN .Annee {
+  width: 30%;
+}
+
+#DateN .Annee .Selec {
+  width: 92%;
+  margin-left: 4%;
+  height: 50px;
+}
+
+#DateN p {
+  font-size: 12px;
+  font-family: "Nunito Sans";
+  margin-left: 25%;
+}
+
+#polit {
+  font-size: 15px;
+  font-family: "Nunito Sans";
+  margin-left: 15%;
+}
+
+#polit .Acc {
+  color: #FF5F00;
+  text-decoration: underline;
+}
+
+#radio {
+  margin-left: 15%;
+  color: #FF5F00;
+}
+
+#radio input[type=radio]:checked {
+  color: #FF5F00;
+}
+
+#radio #RadioPar {
+  font-size: 15px;
+  font-family: "Nunito Sans";
+}
+
+#radio .Acc {
+  color: #FF5F00;
+  text-decoration: underline;
+}
+
+#BtnAd {
+  width: 25%;
+  height: 50px;
+  margin-left: 60%;
+  font-size: 24px;
+  font-family: "Nunito Sans";
+  background-color: white;
+  color: #FF5F00;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+#BtnAd:hover {
+  background-color: #FF5F00;
+  color: white;
+  font-size: 24px;
+  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.Upper {
+  font-family: "Nunito Sans";
+}
+
+#ParagVerf1 {
+  font-family: "Nunito Sans";
+  font-size: 12px;
+  margin-left: 5%;
+}
+
+#ParagVerf2 {
+  font-family: "Nunito Sans";
+  font-size: 12px;
+  margin-left: 5%;
+}
+
+#ParagVerf3 {
+  font-family: "Nunito Sans";
+  font-size: 12px;
+  margin-left: 5%;
+}
+
+#ParagVerf4 {
+  font-family: "Nunito Sans";
+  font-size: 12px;
+  margin-left: 5%;
+}
+
+#ParagVerf5 {
+  font-family: "Nunito Sans";
+  font-size: 12px;
+  margin-left: 5%;
+}
+
+#ParagVerf6 {
+  font-family: "Nunito Sans";
+  font-size: 12px;
+  margin-left: 5%;
+}
+/*# sourceMappingURL=style-log.css.map */

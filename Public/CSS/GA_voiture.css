@@ -1,0 +1,129 @@
+#Affichage_voiture {
+  width: 90%;
+  height: auto;
+  margin-left: 10%;
+}
+
+#Affichage_voiture .Voitures {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: white;
+}
+
+#Affichage_voiture .Voitures .Voiture {
+  width: 33%;
+  height: auto;
+  background-color: #e0e0e0;
+}
+
+#Affichage_voiture .Voitures .Voiture .img_v {
+  width: 100%;
+}
+
+#Affichage_voiture .Voitures .Voiture .img_v img {
+  width: 100%;
+  height: auto;
+}
+
+#Affichage_voiture .Voitures .Voiture .Modele {
+  width: 100%;
+  height: 30px;
+}
+
+#Affichage_voiture .Voitures .Voiture .Modele p {
+  font-family: 'Nunito Sans', sans-serif;
+  color: black;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+#Affichage_voiture .Voitures .Voiture .Btns {
+  width: 100%;
+  height: 60px;
+  background-color: #ffae7f;
+  border: solid 1px #ff640a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#Affichage_voiture .Voitures .Voiture .Btns img {
+  cursor: pointer;
+  width: 40px;
+  height: auto;
+}
+
+#Affichage_voiture .Voitures .Voiture .img_ajout {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#Affichage_voiture .Voitures .Voiture .img_ajout img {
+  width: 50%;
+  height: auto;
+  margin-left: 25%;
+  margin-top: 15%;
+}
+
+#Affichage_voiture .Voitures .Voiture .Zone_modif {
+  width: 100%;
+  height: 150px;
+  background-color: #FF5F00;
+  margin: 0 auto;
+}
+
+#Affichage_voiture .Voitures .Voiture .Zone_modif p {
+  margin-left: 20%;
+  float: left;
+  width: 20%;
+  margin-top: 5%;
+  font-family: 'Nunito Sans', sans-serif;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+#Affichage_voiture .Voitures .Voiture .Zone_modif input[type=text] {
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#Affichage_voiture .Voitures .Voiture .Zone_modif .btnmodif {
+  margin-left: 25%;
+  width: 60%;
+  height: 40px;
+  font-family: 'Nunito Sans', sans-serif;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+}
+/*# sourceMappingURL=GA_voiture.css.map */

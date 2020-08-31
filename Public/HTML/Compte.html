@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/Compte.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+        function visible() {
+            var PageConn = document.getElementById("sincrire");
+            PageConn.style.display = "block";
+        }
+
+        function cacherConn() {
+            var PageConn = document.getElementById("sincrire");
+            PageConn.style.display = "none";
+        }
+    </script>
+</head>
+
+<body>
+    <div id="header">
+        <div id="Menu">
+            <img src="../IMG/Img_Site/open-menu.png" alt="">
+        </div>
+        <div id="Logo">
+            <img src="../IMG/Img_Site/logo1233.png" alt="">
+        </div>
+        <div id="Espace">
+            <div id="Res"><span><a href="">RESERVATION</a> </span></div>
+        </div>
+        <div id="Con">
+            <div id="Lgn"><span><a href="javascript:visible()">LOGIN/SIGN UP</a> </span></div>
+            <!-- <div id="Cnx"><span><a href="">CONNEXION</a></span></div> -->
+            <div id="Prf">
+                <img src="../IMG/Img_Site/user.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="zone_separ zone_separ_blanc"></div>
+    <div id="sincrire">
+        <div id="logoInscrip">
+            <img src="../IMG/Img_Site/logo1233.png" alt="">
+            <a href="javascript:cacherConn()">FERMER ⤫</a>
+        </div>
+        <div id="Inscrip">
+            <div id="pan1">
+                <div class="blank"></div>
+                <div class="blank"></div>
+                <p>EMAIL:</p>
+                <input class="input" type="text" id="P">
+                <div class="blank"></div>
+                <div class="blank"></div>
+                <p>MOT DE PASSE:</p>
+                <input class="input" type="text" id="P">
+                <div class="blank"></div>
+                <div class="blank"></div>
+                <input type="checkbox" id="check" name="">
+                <label for="check">Enregistrer mon numéro de membre dans le navigateur</label>
+                <div class="blank"></div>
+                <div class="blank"></div>
+                <div><input id="SeConn" type="button" value="SE CONNECTER"></div>
+            </div>
+            <div id="pan2">
+                <div class="blank"></div>
+                <p>Pas encore membre?</p>
+                <div class="blank"></div>
+                <div class="blank"></div>
+                <p id="p1">Adhésion GRATUITE ! Grâce au programme CAR&RENT+ , la location de voiture n’a jamais été
+                    aussi facile, rapide et avantageuse.</p>
+                <ul>
+                    <li>C'est rapide</li>
+                    <li>C'est Flexible</li>
+                    <li>C'est facile</li>
+                </ul>
+                <div class="blank"></div>
+                <div><input id="Adherer" type="button" value="S'INSCRIRE" onclick=window.location.href="./login.html">
+                </div>
+                <div class="blank"></div>
+            </div>
+        </div>
+    </div>
+    <div id="Pub">
+        <img src="../IMG/Img_Site/pub.jpg" alt="">
+    </div>
+    <div id="Compte">
+        <div id="C1">
+            <div id="Div_img">
+                <div id="img1"><img src="../IMG/Img_Profil/imageDefault.svg" alt=""></div>
+            </div>
+            <div id="Infos">
+                <div class="Info">
+                    <div class="Info1">
+                        <p>NOM</p>
+                    </div>
+                    <div class="RempInfos1">
+                        <p>CHAOUB</p>
+                    </div>
+                </div>
+                <div class="Info">
+                    <div class="Info1">
+                        <p>PRENOM</p>
+                    </div>
+                    <div class="RempInfos1">
+                        <p>ACHRAF</p>
+                    </div>
+                </div>
+                <div class="Info">
+                    <div class="Info1">
+                        <p>AGE</p>
+                    </div>
+                    <div class="RempInfos1" id="Adresse">
+                        <p>26 ANS</p>
+                    </div>
+                </div>
+                <div class="Info">
+                    <div class="Info1">
+                        <p>ADRESSE</p>
+                    </div>
+                    <div class="RempInfos1" id="Adresse">
+                        <p>X Bloc xx Quartier zz YY city MAroc</p>
+                    </div>
+                </div>
+            </div>
+            <div id="btnDec">
+                <input type="button" value="DECONNEXION">
+            </div>
+
+        </div>
+        <div id="C2">
+
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

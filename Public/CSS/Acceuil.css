@@ -1,0 +1,1812 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: 'Nunito Sans', sans-serif;
+  width: 80%;
+  margin-left: 10%;
+}
+
+@media screen and (max-width: 1023px) {
+  body {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+
+#header {
+  height: 60px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#header #ML {
+  width: 20%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  #header #ML {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #header #ML {
+    display: none;
+  }
+}
+
+#header #ML #Menu {
+  margin: auto 10px;
+  width: 10%;
+}
+
+#header #ML #Menu img {
+  width: 30px;
+}
+
+#header #ML #Logo {
+  margin: auto 0;
+  width: 70%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  #header #ML #Logo {
+    width: 80%;
+  }
+}
+
+#header #ML #Logo img {
+  width: 100%;
+  height: 50px;
+}
+
+@media screen and (max-width: 1024px) {
+  #header #ML #Logo img {
+    width: 80%;
+  }
+}
+
+#header #RCP {
+  width: 80%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  #header #RCP {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #header #RCP {
+    display: none;
+  }
+}
+
+#header #RCP #Espace {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  margin: 0 auto;
+}
+
+#header #RCP #Espace span {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 900;
+  font-family: "Nunito Sans";
+}
+
+@media screen and (max-width: 1024px) {
+  #header #RCP #Espace span {
+    font-size: 16px;
+  }
+}
+
+#header #RCP #Espace span a {
+  text-decoration: none;
+  color: #000;
+}
+
+#header #RCP #Con {
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header #RCP #Con #Lgn,
+#header #RCP #Con #Cnx {
+  width: 50%;
+  border-right: solid 1px black;
+  margin: 0 auto;
+}
+
+#header #RCP #Con #Lgn span,
+#header #RCP #Con #Cnx span {
+  font-size: 18px;
+  font-weight: 800;
+  font-family: "Nunito Sans";
+}
+
+@media screen and (max-width: 1024px) {
+  #header #RCP #Con #Lgn span,
+  #header #RCP #Con #Cnx span {
+    font-size: 16px;
+  }
+}
+
+#header #RCP #Con #Lgn span a,
+#header #RCP #Con #Cnx span a {
+  text-decoration: none;
+  color: #000;
+}
+
+#header #RCP #Con #Prf {
+  width: 33%;
+  margin-left: 5%;
+}
+
+#header #RCP #Con #Prf img {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+}
+
+#header .MenuResp {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  #header .MenuResp {
+    width: 100%;
+    height: 60px;
+    display: block;
+    background-color: white;
+  }
+}
+
+#header .MenuResp div #check {
+  display: none;
+}
+
+#header .MenuResp div #check:not(:checked) ~ .MenuVer {
+  display: none;
+}
+
+#header .MenuResp div #check:checked ~ .MenuVer {
+  display: block;
+}
+
+#header .MenuResp div .MenuRF {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header .MenuResp div .MenuRF .menuimg {
+  width: 40px;
+  height: auto;
+  margin: 0 auto;
+}
+
+#header .MenuResp div .MenuRF .logo {
+  width: 50%;
+  height: auto;
+}
+
+#header .MenuResp div .MenuVer {
+  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 60%;
+  height: auto;
+  background-color: #FF5F00;
+  opacity: 0.9;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#header .MenuResp div .MenuVer .MV {
+  height: 30px;
+  margin: auto 0;
+  border-top: solid 2px white;
+}
+
+#header .MenuResp div .MenuVer .MV > a {
+  color: white;
+  text-decoration: none;
+  list-style-type: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: montserrat;
+}
+
+#Gestion_admin {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Nunito Sans";
+  color: Black;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#Gestion_admin .Gs {
+  width: 20%;
+}
+
+#Gestion_admin .Gs a {
+  text-decoration: none;
+  color: Black;
+}
+
+#Gestion_admin #A1 {
+  background-color: white;
+  opacity: 0.6;
+}
+
+#Gestion_admin #A1:hover {
+  background-color: #FF5F00;
+  opacity: 0.9;
+}
+
+#Gestion_admin #A2 {
+  background-color: white;
+  opacity: 0.6;
+}
+
+#Gestion_admin #A2:hover {
+  background-color: #FF5F00;
+  opacity: 0.9;
+}
+
+#Gestion_admin #A3 {
+  background-color: white;
+  opacity: 0.6;
+}
+
+#Gestion_admin #A3:hover {
+  background-color: #FF5F00;
+  opacity: 0.9;
+}
+
+#Gestion_admin #A4 {
+  background-color: white;
+  opacity: 0.6;
+}
+
+#Gestion_admin #A4:hover {
+  background-color: #FF5F00;
+  opacity: 0.9;
+}
+
+#Gestion_admin #A5 {
+  background-color: white;
+  opacity: 0.6;
+}
+
+#Gestion_admin #A5:hover {
+  background-color: #FF5F00;
+  opacity: 0.9;
+}
+
+.zone_separ {
+  width: 100%;
+  height: 41px;
+}
+
+.zone_separR {
+  width: 100%;
+  height: 35px;
+}
+
+.zone_separ_noir {
+  background-color: black;
+}
+
+.zone_separ_color {
+  background-color: #FF5F00;
+}
+
+.zone_separ_blanc {
+  background-color: white;
+}
+
+#Footer {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#Footer #Coopy {
+  width: 30%;
+}
+
+#Footer #Coopy p {
+  color: black;
+  font-size: 15px;
+}
+
+#Footer #RxS {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#Footer #RxS .Rs {
+  width: 10%;
+  height: auto;
+  background-color: #FF5F00;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#Footer #RxS .Rs img {
+  width: 30px;
+  height: 30px;
+}
+
+.blank {
+  width: auto;
+  height: 20px;
+}
+
+#sincrire {
+  display: none;
+  width: 80%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.808);
+  position: absolute;
+  top: 0;
+  z-index: 188;
+}
+
+#sincrire #logoInscrip {
+  width: 60%;
+  height: 100px;
+  background-color: white;
+  margin-left: 20%;
+  margin-top: 7.5%;
+}
+
+#sincrire #logoInscrip img {
+  margin-left: 5%;
+  width: 40%;
+  height: 100px;
+  float: left;
+}
+
+#sincrire #logoInscrip a {
+  font-size: 20px;
+  font-family: "Nunito Sans";
+  margin-left: 43%;
+  color: #FF5F00;
+  margin-top: 90px;
+  list-style-type: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#sincrire #Inscrip {
+  width: 60%;
+  height: 400px;
+  margin-left: 20%;
+  padding-left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: Black;
+}
+
+#sincrire #Inscrip #pan1 {
+  width: 60%;
+  background-color: black;
+  color: White;
+}
+
+#sincrire #Inscrip #pan1 p {
+  font-size: 18px;
+  font-family: "Nunito Sans";
+}
+
+#sincrire #Inscrip #pan1 .input {
+  width: 70%;
+  height: 30px;
+  font-size: 18px;
+  font-family: "Nunito Sans";
+}
+
+#sincrire #Inscrip #pan1 #check {
+  float: left;
+  width: 20px;
+}
+
+#sincrire #Inscrip #pan1 label {
+  font-size: 18px;
+  font-family: "Nunito Sans";
+  margin-left: 2%;
+}
+
+#sincrire #Inscrip #pan1 #SeConn {
+  color: black;
+  width: 80%;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #FF5F00;
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  font-weight: 600;
+  border-style: none;
+  cursor: pointer;
+}
+
+#sincrire #Inscrip #pan2 {
+  width: 40%;
+  background-color: #FF5F00;
+  color: white;
+}
+
+#sincrire #Inscrip #pan2 p {
+  text-align: center;
+  font-size: 24px;
+  font-family: "Nunito Sans";
+}
+
+#sincrire #Inscrip #pan2 #p1 {
+  font-size: 18px;
+  text-align: start;
+  margin-left: 10%;
+}
+
+#sincrire #Inscrip #pan2 ul {
+  margin-left: 10%;
+}
+
+#sincrire #Inscrip #pan2 ul li {
+  font-size: 18px;
+  text-align: start;
+  margin-left: 10%;
+  font-family: "Nunito Sans";
+  color: white;
+  padding-top: 20px;
+}
+
+#sincrire #Inscrip #pan2 #Adherer {
+  color: #FF5F00;
+  width: 80%;
+  height: 40px;
+  border-radius: 5px;
+  background-color: black;
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 10%;
+  border-style: none;
+  cursor: pointer;
+}
+
+#ShowCars {
+  background-color: black;
+  width: 100%;
+  height: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#ShowCars .Zone_H {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#ShowCars .Zone_H p {
+  margin: 0 auto;
+  font-size: 30px;
+  color: #FF5F00;
+}
+
+@media screen and (max-width: 1024px) {
+  #ShowCars .Zone_H p {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #ShowCars .Zone_H p {
+    font-size: 25px;
+    margin-top: 20px;
+  }
+}
+
+#ShowCars .Zone_H .p1 {
+  font-size: 18px;
+  color: white;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  #ShowCars .Zone_H .p1 {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #ShowCars .Zone_H .p1 {
+    font-size: 10px;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #ShowCars {
+    font-size: 30px;
+  }
+}
+
+#ShowCars #Slides_Car {
+  background-color: black;
+  width: 100%;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#ShowCars #Slides_Car .Navig {
+  width: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  #ShowCars #Slides_Car .Navig {
+    width: 6%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #ShowCars #Slides_Car .Navig {
+    display: none;
+  }
+}
+
+#ShowCars #Slides_Car .Navig .Navig1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border: solid 1px black;
+}
+
+@media screen and (max-width: 1440px) {
+  #ShowCars #Slides_Car .Navig .Navig1 {
+    width: 70px;
+    height: 70px;
+    border-radius: 45px;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+    -ms-border-radius: 45px;
+    -o-border-radius: 45px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #ShowCars #Slides_Car .Navig .Navig1 {
+    width: 60px;
+    height: 60px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+  }
+}
+
+#ShowCars #Slides_Car .Navig .Navig1 img {
+  width: 50px;
+  height: 50px;
+}
+
+@media screen and (max-width: 1440px) {
+  #ShowCars #Slides_Car .Navig .Navig1 img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #ShowCars #Slides_Car .Navig .Navig1 img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #ShowCars #Slides_Car {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    flex-wrap: wrap;
+    height: auto;
+  }
+}
+
+#ShowCars #Slides_Car #InfosCar1 {
+  width: 30%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1440px) {
+  #ShowCars #Slides_Car #InfosCar1 {
+    width: 27%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #ShowCars #Slides_Car #InfosCar1 {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #ShowCars #Slides_Car #InfosCar1 {
+    width: 50%;
+  }
+}
+
+#ShowCars #Slides_Car #InfosCar1 #Categorie {
+  margin-left: 10%;
+  color: white;
+}
+
+@media screen and (max-width: 1440px) {
+  #ShowCars #Slides_Car #InfosCar1 #Categorie {
+    margin-left: 7.5%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #ShowCars #Slides_Car #InfosCar1 #Categorie {
+    width: 100%;
+  }
+}
+
+#ShowCars #Slides_Car #InfosCar1 .P_infos {
+  margin-left: 10%;
+  font-size: 31px;
+  font-weight: 800;
+  color: white;
+}
+
+@media screen and (max-width: 1440px) {
+  #ShowCars #Slides_Car #InfosCar1 .P_infos {
+    margin-left: 7.5%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #ShowCars #Slides_Car #InfosCar1 .P_infos {
+    width: 100%;
+  }
+}
+
+#ShowCars #Slides_Car #InfosCar1 #tiré {
+  margin-left: 10%;
+  width: 70px;
+  height: 9px;
+  background-color: #FF5F00;
+}
+
+@media screen and (max-width: 1440px) {
+  #ShowCars #Slides_Car #InfosCar1 #tiré {
+    margin-left: 7.5%;
+  }
+}
+
+#ShowCars #Slides_Car #InfosCar1 #Prix {
+  color: white;
+  margin-left: 10%;
+  font-size: 29px;
+  letter-spacing: 1px;
+  float: left;
+}
+
+@media screen and (max-width: 1440px) {
+  #ShowCars #Slides_Car #InfosCar1 #Prix {
+    margin-left: 7.5%;
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #ShowCars #Slides_Car #InfosCar1 #Prix {
+    font-size: 20px;
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #ShowCars #Slides_Car #InfosCar1 #Prix {
+    width: 100%;
+    font-size: 15px;
+  }
+}
+
+#ShowCars #Slides_Car #InfosCar1 #Day {
+  letter-spacing: 1px;
+  color: white;
+}
+
+@media screen and (max-width: 1440px) {
+  #ShowCars #Slides_Car #InfosCar1 #Day {
+    margin-left: 7.5%;
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #ShowCars #Slides_Car #InfosCar1 #Day {
+    font-size: 20px;
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #ShowCars #Slides_Car #InfosCar1 #Day {
+    width: 100%;
+    font-size: 10px;
+  }
+}
+
+#ShowCars #Slides_Car #InfosCar1 #BtnRes {
+  width: 270px;
+  height: 50px;
+  background-color: #FF5F00;
+  border: transparent;
+  font-weight: 700;
+  margin-left: 20%;
+}
+
+@media screen and (max-width: 1440px) {
+  #ShowCars #Slides_Car #InfosCar1 #BtnRes {
+    margin-left: 15%;
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #ShowCars #Slides_Car #InfosCar1 #BtnRes {
+    margin-left: 2.5%;
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #ShowCars #Slides_Car #InfosCar1 #BtnRes {
+    width: 100%;
+  }
+}
+
+#ShowCars #Slides_Car #Affich_img {
+  width: 30%;
+  height: 100%;
+  background-color: black;
+}
+
+@media screen and (max-width: 1440px) {
+  #ShowCars #Slides_Car #Affich_img {
+    width: 32.5%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #ShowCars #Slides_Car #Affich_img {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #ShowCars #Slides_Car #Affich_img {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #ShowCars #Slides_Car #Affich_img {
+    width: 35%;
+    margin: auto 0;
+  }
+}
+
+#ShowCars #Slides_Car #Affich_img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media screen and (max-width: 425px) {
+  #ShowCars #Slides_Car #Affich_img img {
+    width: 140%;
+  }
+}
+
+#ShowCars #Slides_Car #InfosCar2 {
+  width: 30%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1440px) {
+  #ShowCars #Slides_Car #InfosCar2 {
+    width: 27%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #ShowCars #Slides_Car #InfosCar2 {
+    width: 33%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #ShowCars #Slides_Car #InfosCar2 {
+    width: 38%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #ShowCars #Slides_Car #InfosCar2 {
+    display: none;
+  }
+}
+
+#ShowCars #Slides_Car #InfosCar2 .options {
+  width: 100%;
+  height: 20%;
+  padding: 5px 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#ShowCars #Slides_Car #InfosCar2 .options .Zone_opt {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1440px) {
+  #ShowCars #Slides_Car #InfosCar2 .options .Zone_opt {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #ShowCars #Slides_Car #InfosCar2 .options .Zone_opt {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #ShowCars #Slides_Car #InfosCar2 .options .Zone_opt {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+#ShowCars #Slides_Car #InfosCar2 .options .Zone_opt img {
+  margin-left: 5%;
+  height: 30px;
+  width: 30px;
+}
+
+@media screen and (max-width: 1440px) {
+  #ShowCars #Slides_Car #InfosCar2 .options .Zone_opt img {
+    width: 27.5px;
+    height: 27.5px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #ShowCars #Slides_Car #InfosCar2 .options .Zone_opt img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #ShowCars #Slides_Car #InfosCar2 .options .Zone_opt img {
+    width: 22.5px;
+    height: 22.5px;
+  }
+}
+
+#ShowCars #Slides_Car #InfosCar2 .options p {
+  font-size: 21px;
+  color: white;
+  margin: auto 5%;
+}
+
+@media screen and (max-width: 1440px) {
+  #ShowCars #Slides_Car #InfosCar2 .options p {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #ShowCars #Slides_Car #InfosCar2 .options p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #ShowCars #Slides_Car #InfosCar2 .options p {
+    font-size: 15px;
+  }
+}
+
+#ShowCars #Slides_Car #InfosCar2 .options span {
+  font-size: 21px;
+  color: #FF5F00;
+  margin: auto 0;
+}
+
+@media screen and (max-width: 1440px) {
+  #ShowCars #Slides_Car #InfosCar2 .options span {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #ShowCars #Slides_Car #InfosCar2 .options span {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #ShowCars #Slides_Car #InfosCar2 .options span {
+    font-size: 15px;
+  }
+}
+
+#Recherche {
+  width: 100%;
+  height: auto;
+  background-color: #FF5F00;
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  #Recherche {
+    display: none;
+  }
+}
+
+#Recherche #Parag1 p {
+  text-align: center;
+  font-size: 31px;
+  color: white;
+  font-weight: 800;
+}
+
+#Recherche #inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#Recherche #inputs select,
+#Recherche #inputs .date,
+#Recherche #inputs input {
+  height: 50px;
+  width: 431px;
+  padding-left: 160px;
+}
+
+#Recherche #inputs input::-webkit-input-placeholder {
+  color: Black;
+}
+
+#Recherche #inputs input:-ms-input-placeholder {
+  color: Black;
+}
+
+#Recherche #inputs input::-ms-input-placeholder {
+  color: Black;
+}
+
+#Recherche #inputs input::placeholder {
+  color: Black;
+}
+
+#Recherche #inputs .input_container {
+  position: relative;
+}
+
+#Recherche #inputs .input_icon {
+  position: absolute;
+  top: 2px;
+  left: 350px;
+}
+
+#Recherche #inputs .input_icon img {
+  width: 40px;
+  height: auto;
+}
+
+#Recherche #Btn_Recherche {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#Recherche #Btn_Recherche input {
+  width: 350px;
+  height: 50px;
+  text-align: center;
+  background-color: white;
+  border: transparent;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+#Service,
+#Propos {
+  width: 100%;
+  height: 400px;
+}
+
+#Service .Zone_H,
+#Propos .Zone_H {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#Service .Zone_H p,
+#Propos .Zone_H p {
+  margin: 0 auto;
+  font-size: 30px;
+  color: #FF5F00;
+}
+
+@media screen and (max-width: 1024px) {
+  #Service .Zone_H p,
+  #Propos .Zone_H p {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #Service .Zone_H p,
+  #Propos .Zone_H p {
+    font-size: 25px;
+    margin-top: 20px;
+  }
+}
+
+#Service .Zone_H .p1,
+#Propos .Zone_H .p1 {
+  font-size: 18px;
+  color: white;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  #Service .Zone_H .p1,
+  #Propos .Zone_H .p1 {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #Service .Zone_H .p1,
+  #Propos .Zone_H .p1 {
+    font-size: 10px;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+#Service .Zone_H .p2,
+#Propos .Zone_H .p2 {
+  font-size: 18px;
+  color: black;
+  font-weight: 100;
+  margin-top: -10px;
+}
+
+@media screen and (max-width: 1024px) {
+  #Service .Zone_H .p2,
+  #Propos .Zone_H .p2 {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #Service .Zone_H .p2,
+  #Propos .Zone_H .p2 {
+    font-size: 13px;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #Service .Zone_H .p2,
+  #Propos .Zone_H .p2 {
+    font-size: 11px;
+  }
+}
+
+#Service #Services,
+#Propos #Services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+}
+
+#Service #Services .Navig,
+#Propos #Services .Navig {
+  width: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  #Service #Services .Navig,
+  #Propos #Services .Navig {
+    width: 6%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #Service #Services .Navig,
+  #Propos #Services .Navig {
+    display: none;
+  }
+}
+
+#Service #Services .Navig .Navig1,
+#Propos #Services .Navig .Navig1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border: solid 1px black;
+}
+
+@media screen and (max-width: 1440px) {
+  #Service #Services .Navig .Navig1,
+  #Propos #Services .Navig .Navig1 {
+    width: 70px;
+    height: 70px;
+    border-radius: 45px;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+    -ms-border-radius: 45px;
+    -o-border-radius: 45px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #Service #Services .Navig .Navig1,
+  #Propos #Services .Navig .Navig1 {
+    width: 60px;
+    height: 60px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+  }
+}
+
+#Service #Services .Navig .Navig1 img,
+#Propos #Services .Navig .Navig1 img {
+  width: 50px;
+  height: 50px;
+}
+
+@media screen and (max-width: 1440px) {
+  #Service #Services .Navig .Navig1 img,
+  #Propos #Services .Navig .Navig1 img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #Service #Services .Navig .Navig1 img,
+  #Propos #Services .Navig .Navig1 img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+#Service #Services .Zone,
+#Propos #Services .Zone {
+  width: 40%;
+  height: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  #Service #Services .Zone,
+  #Propos #Services .Zone {
+    width: 35%;
+    margin-left: 0%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #Service #Services .Zone,
+  #Propos #Services .Zone {
+    width: 50%;
+  }
+}
+
+#Service #Services .Zone img,
+#Propos #Services .Zone img {
+  width: 40%;
+  height: 300px;
+  margin-left: 70%;
+}
+
+@media screen and (max-width: 1024px) {
+  #Service #Services .Zone img,
+  #Propos #Services .Zone img {
+    width: 80%;
+    margin-left: 40%;
+  }
+}
+
+#Service #Services #Ach,
+#Propos #Services #Ach {
+  width: 50%;
+  height: auto;
+}
+
+#Service #Services #Ach #descrip_S,
+#Propos #Services #Ach #descrip_S {
+  width: 60%;
+  height: auto;
+  background-color: #FF5F00;
+  color: white;
+  text-align: start;
+}
+
+@media screen and (max-width: 425px) {
+  #Service #Services #Ach #descrip_S,
+  #Propos #Services #Ach #descrip_S {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #Service #Services #Ach #descrip_S,
+  #Propos #Services #Ach #descrip_S {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #Service #Services #Ach #descrip_S,
+  #Propos #Services #Ach #descrip_S {
+    width: 100%;
+  }
+}
+
+#Service #Services #Ach #descrip_S p,
+#Propos #Services #Ach #descrip_S p {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  #Service #Services #Ach #descrip_S p,
+  #Propos #Services #Ach #descrip_S p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #Service #Services #Ach #descrip_S p,
+  #Propos #Services #Ach #descrip_S p {
+    font-size: 12px;
+  }
+}
+
+#Service #Services #Ach #descrip_S #Span,
+#Propos #Services #Ach #descrip_S #Span {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+#Propos {
+  height: auto;
+  width: 100%;
+}
+
+#Propos #Zone1 {
+  width: 60%;
+  height: 500px;
+  margin-left: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+#Propos #Zone1 #Des_Nav {
+  width: 60%;
+  z-index: 100;
+  margin: auto 0;
+}
+
+#Propos #Zone1 #Des_Nav #Descrip_p {
+  width: 70%;
+  height: auto;
+  background-color: #FF5F00;
+  color: white;
+  margin: 15% 30%;
+}
+
+#Propos #Zone1 #Des_Nav #Descrip_p p {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+#Propos #Zone1 #Des_Nav #Descrip_p #Span {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+#Propos #Zone1 #Des_Nav .Navig {
+  width: 10%;
+  float: left;
+  margin-left: 15%;
+}
+
+#Propos #Zone1 #Des_Nav .Navig .Navig1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border: solid 1px black;
+  margin-left: 70px;
+}
+
+#Propos #Zone1 #Des_Nav .Navig .Navig1 img {
+  width: 30px;
+  height: 30px;
+}
+
+#Propos #Zone1 #Zone_img_p {
+  width: 40%;
+  height: 500px;
+  background-image: url(../IMG/Img_Site/Propos.jpg);
+  background-size: cover;
+  z-index: -10;
+  margin-left: -50px;
+}
+
+#Contact {
+  width: 100%;
+  height: 450px;
+  background-color: #FF5F00;
+}
+
+@media screen and (max-width: 1024px) {
+  #Contact {
+    display: none;
+  }
+}
+
+#Contact .Zone_H {
+  text-align: center;
+}
+
+#Contact .Zone_H p {
+  color: white;
+  font-size: 30px;
+}
+
+#Contact .Zone_H .p2 {
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+#Contact .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#Contact .inputs input {
+  height: 40px;
+  width: 360px;
+  padding-left: 30px;
+  border: transparent;
+}
+
+#Contact textarea {
+  margin-left: 12.5%;
+  border: transparent;
+}
+
+#Contact #BtnCtn {
+  width: 270px;
+  height: 50px;
+  background-color: white;
+  border: transparent;
+  font-weight: 700;
+  color: black;
+  margin-left: 41%;
+}
+
+#Adresse {
+  width: 100%;
+  height: 200px;
+}
+
+@media screen and (max-width: 1024px) {
+  #Adresse {
+    display: none;
+  }
+}
+
+#Adresse .Zone_H {
+  text-align: center;
+}
+
+#Adresse .Zone_H p {
+  color: #FF5F00;
+  font-size: 30px;
+}
+
+#Adresse #parts {
+  width: 100%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#Adresse #parts .Adr {
+  width: 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#Adresse #parts .Adr p {
+  color: black;
+  font-size: 20;
+  font-weight: 700;
+}
+
+#Adresse #parts #LogoSoc {
+  width: 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#Adresse #parts #LogoSoc img {
+  width: 200px;
+  height: 80px;
+}
+/*# sourceMappingURL=Acceuil.css.map */

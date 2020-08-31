@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@import 'Reservation';
+
+#Pub {
+    width: 100%;
+    height: auto;
+
+    img {
+        width: 100%;
+        height: auto;
+
+
+    }
+}
+
+#Pub2 {
+    width: 100%;
+    height: auto;
+
+    img {
+
+        height: auto;
+    }
+}
+
+#Compte {
+    width: 100%;
+    height: auto;
+    @include FlexR();
+    justify-content: space-between;
+
+    #C1 {
+        width: 30%;
+        height: 700px;
+        top: 20px;
+        position: sticky;
+        background-color: $color;
+        @include FlexC();
+
+        #Div_img {
+            width: 100%;
+            height: 150px;
+            background-color: $color;
+
+            #img1 {
+                width: 30%;
+                margin: 20px auto;
+
+                img {
+                    width: auto;
+                    height: auto;
+                }
+            }
+
+
+        }
+
+        #Infos {
+            width: 100%;
+            height: auto;
+            background-color: wheat;
+
+
+            .Info {
+                width: 100%;
+                height: 70px;
+                background-color: $color;
+                @include FlexR();
+
+                .Info1,
+                .RempInfos1 {
+                    width: 50%;
+                    height: 60px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    p {
+                        font-size: 18px;
+                        font-weight: 800;
+                        color: white;
+                        text-align: center;
+                    }
+                }
+
+            }
+
+
+        }
+
+        #btnDec {
+            width: 30%;
+            height: 40px;
+            margin: 100px auto;
+
+
+
+            input {
+                border-radius: 50px;
+
+                -webkit-border-radius: 50px;
+                -moz-border-radius: 50px;
+                -ms-border-radius: 50px;
+                -o-border-radius: 50px;
+                width: 100%;
+                height: 40px;
+                background-color: rgba(255, 68, 0, 0.349);
+                border: solid 5px white;
+                font-size: 14px;
+                font-weight: 600;
+                color: white;
+
+            }
+
+        }
+    }
+
+    #C2 {
+        width: 65%;
+        height: 2000px;
+        background-color: burlywood;
+    }
+
+}
