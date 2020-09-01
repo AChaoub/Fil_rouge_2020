@@ -1,6 +1,6 @@
 
 <?php
 include('Header_admin.php');
-include('voiture.php');
+include('Voiture.php');
 include('footer.php');
 include('script.php');

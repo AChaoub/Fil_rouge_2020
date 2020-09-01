@@ -10,18 +10,20 @@ $res = mysqli_query($conn, $sql_nb_favoris);
 $rows_fav = mysqli_num_rows($res) + 1;
 $id_admin = 1;
 if (isset($_POST['id_client'])) {
-    echo $_POST['id_client'];
+    // echo $_POST['id_client'];
 }
 
 if (isset($_POST['visible'])) {
-
-
-    echo $_POST['visible'];
+    $id_Client = $_POST['id_client'];
     if (($_POST['visible']) == true) {
-        //insert 
-        // $sql_favoris = "INSERT INTO  favoris (`id_Utilisateur`, `id_Admin`, `id_Fvr`) VALUES (" . $_SESSION['id_utilisateur'] . "," . $id_admin . "," . $rows_fav . ")";
-    } else {
+        $sql_insert_favoris = "INSERT INTO  favoris (`id_Utilisateur`, `id_Admin`, `id_Fvr`) VALUES ($id_Client, 1 ,$rows_fav )";
+        // mysqli_query($conn, $sql_insert_favoris);
+        echo 'insert';
+    }
+    if (!($_POST['visible']) == false) {
         //delete
+        $sql_delete_favoris = "DELETE FROM `favoris` WHERE `id_Utilisateur` =$id_Client ";
+        // mysqli_query($conn, $sql_delete_favoris);
 
     }
 }

@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="../CSS/reservation.css">
     <link rel="stylesheet" href="../CSS/Compte.css">
     <link rel="stylesheet" href="../CSS/style-log.css">
-
 </head>
 
 <body>
@@ -44,11 +43,11 @@
             }
             if ($rows_client == 1) {
                 $_SESSION['id_client'] = $ligne_client["id_Utilisateur"];
-                header('Location:GA_client.php');
+                echo $_SESSION['id_client'];
+                header('Location:Page_reservation_client.php');
             }
         }
     }
-
     ?>
     <form action="#" method="POST">
         <div id="sincrire">

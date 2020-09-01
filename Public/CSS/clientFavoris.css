@@ -146,8 +146,8 @@
 }
 
 .cf-results-profil #Zone_profil_img div img {
-  width: auto;
-  height: auto;
+  width: 90px;
+  height: 80px;
 }
 
 .cf-results-profil #Zone_infos {

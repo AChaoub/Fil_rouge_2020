@@ -40,10 +40,49 @@
                 echo '<p style="text-align:center"> Aucun client à afficher</p>';
             } else {
                 while ($ligne = $res_client->fetch_assoc()) {
-                    echo '
+                    if ($ligne['Image_util'] != NULL) {
+                        echo '
+                                <div class="cf-results-profil">
+                                <div id="Zone_profil_img">
+                                    <div><img src="../IMG/Img_Profil/' . $ligne['Image_util'] . '.jpg" style="width:90px;height:80px;" alt=""></div>
+                                </div>
+                                <div id="Zone_infos">
+                                    <h3>' . $ligne['Nom'] . '  ' . $ligne['Prenom'] . ' </h3>
+                                    <div class="cf-blank-10"></div>
+                                    <h5>' . $ligne['Email'] . ' </h5>
+                                    <div class="cf-blank-10"></div>
+                                    <h5>' . $ligne['Telephone'] . '</h5>
+                                    <div class="cf-blank-10"></div>
+                                </div>
+                                <div id="Zone_icone">
+                                    <div class="icone" name="fav">
+                                            <div class="cf-results-top-iconBG cf-results-top-heart red-heart"  >
+                                                <img  class="BH" src="../IMG/Img_Profil/64px-Ei-heart.png" width="50px" height="auto" alt="" >
+                                                <img style="display:none" class="RH" src="../IMG/Img_Profil/heart.png" width="35px" height="auto" alt="">
+                                                <input type="hidden" value=' . $ligne['id_Utilisateur'] . '>
+                                            </div>
+                                            <p class="auto_body_name">Favoris</p>
+                                    </div>
+                                    <div class="icone" name="blacklist">
+                                            <div class="cf-results-top-iconBG cf-results-top-phone blacklist">
+                                                <img src="../IMG/Img_Profil/B1.png" class="blacklist_vide"/>
+                                                <img style="display:none" src="../IMG/Img_Profil/B2.png" />
+                                                <input type="hidden" value=' . $ligne['id_Utilisateur'] . '>
+                                            </div>
+                                            <p class="auto_body_name">Blacklist</p>
+                                    </div>
+                
+                                </div>
+                
+                            </div>
+                            <div class="cf-blank-10"></div>
+                        <div class="cf-blank-10"></div>
+                        <div class="cf-blank-10"></div>';
+                    } else {
+                        echo '
                     <div class="cf-results-profil">
                     <div id="Zone_profil_img">
-                        <div><img src="./Public/IMG/Img_Profil/1598234791_IMG_20200108_132052.jpg" alt=""></div>
+                        <div><img src="../IMG/Img_Profil/logo1233.png" style="width:90px;height:80px;" alt=""></div>
                     </div>
                     <div id="Zone_infos">
                         <h3>' . $ligne['Nom'] . '  ' . $ligne['Prenom'] . ' </h3>
@@ -56,7 +95,7 @@
                     <div id="Zone_icone">
                         <div class="icone" name="fav">
                                 <div class="cf-results-top-iconBG cf-results-top-heart red-heart"  >
-                                    <img  class="BH" src="../IMG/Img_Profil/64px-Ei-heart.png" width="50px" height="auto" alt="" >
+                                    <img  class="BH" src="../IMG/Img_Profil/64px-Ei-heart.png" width="50px" height="auto" alt="" class="Ceour_vide">
                                     <img style="display:none" class="RH" src="../IMG/Img_Profil/heart.png" width="35px" height="auto" alt="">
                                     <input type="hidden" value=' . $ligne['id_Utilisateur'] . '>
                                 </div>
@@ -77,6 +116,7 @@
                 <div class="cf-blank-10"></div>
             <div class="cf-blank-10"></div>
             <div class="cf-blank-10"></div>';
+                    }
                 }
             }
             ?>
@@ -141,8 +181,6 @@
                 }, function(resp) {
                     console.log(resp);
                 });
-
-
                 if (visible1) {
                     document.getElementsByClassName('blacklist')[i].children[0].style.display = 'block';
                     document.getElementsByClassName('blacklist')[i].children[1].style.display = 'none';

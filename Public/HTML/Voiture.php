@@ -38,27 +38,27 @@ $rows_v = mysqli_num_rows($res_v);
                     <div class="Voitures">';
         while ($ligne = $res_v->fetch_assoc()) {
             echo '
-                        <div class="Voiture">
-                            <div class="img_v" >
-                                <img src="../IMG/Img_voiture/fiat-500.png" width="80px" height="auto" alt="">
-                            </div>
-                            <div class="Modele"><p>Achraf</p></div>
-                            <div class="Btns">
-                                <div class="modif" value=""><img  src="../IMG/Img_voiture/pencil.png" />
-                                </div>
-                                <div class="effacer" value=""><img  src="../IMG/Img_voiture/delete.png" />
-                                </div>
-                                <input class="id" type="hidden" value=' . $ligne['id_V'] . '>
-                            </div>
-                            <div class="Zone_modif" style="display: none;">
-                            <div class="cf-blank-10"></div>
-                            <p>Prix : </p>
-                            <input class="prix" type="text" value="' . $ligne['prix'] . '">
-                            <div class="cf-blank-10"></div>
-                            <input class="btnmodif" type="button" value="Modifier">
-                            </div>
-                        </div>
-                    ';
+            <div class="Voiture">
+                <div class="img_v" >
+                    <img src="../IMG/Img_voiture/' . $ligne['img_v'] . '.png" width="80px" height="auto" alt="">
+                </div>
+                <div class="Modele"><p> ' . $ligne['Modele'] . '</p></div>
+                <div class="Btns">
+                    <div class="modif" value=""><img  src="../IMG/Img_voiture/pencil.png" />
+                    </div>
+                    <div class="effacer" value=""><img  src="../IMG/Img_voiture/delete.png" />
+                    </div>
+                    <input class="id" type="hidden" value=' . $ligne['id_V'] . '>
+                </div>
+                <div class="Zone_modif" style="display: none;">
+                <div class="cf-blank-10"></div>
+                <p>Prix : </p>
+                <input class="prix" type="text" value="' . $ligne['prix'] . '">
+                <div class="cf-blank-10"></div>
+                <input class="btnmodif" type="button" value="Modifier">
+                </div>
+            </div>
+        ';
         } ?>
 
         <div class="Voiture">
@@ -74,7 +74,9 @@ $rows_v = mysqli_num_rows($res_v);
                         </div> -->
 
         </div>
+
 </div>
+
 <?php
     }
 ?>
@@ -105,63 +107,63 @@ $rows_v = mysqli_num_rows($res_v);
 <!-- script -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 <script>
-    $('.red-heart').each(function(i, e) {
+    // $('.red-heart').each(function(i, e) {
 
-        $(this).click(() => {
-            let visible = document.getElementsByClassName('red-heart')[i].children[0].style.display == 'none';
-            let id_client = document.getElementsByClassName('red-heart')[i].children[2].value;
-            // console.log(id_client);
-            $.post("client_traitement.php", {
-                visible: visible,
-                id_client: id_client
+    //     $(this).click(() => {
+    //         let visible = document.getElementsByClassName('red-heart')[i].children[0].style.display == 'none';
+    //         let id_client = document.getElementsByClassName('red-heart')[i].children[2].value;
+    //         // console.log(id_client);
+    //         $.post("client_traitement.php", {
+    //             visible: visible,
+    //             id_client: id_client
 
-            }, function(resp) {
-                console.log(resp);
-            });
-
-
-            if (visible) {
-                document.getElementsByClassName('red-heart')[i].children[0].style.display = 'block';
-                document.getElementsByClassName('red-heart')[i].children[1].style.display = 'none';
-            } else {
-                document.getElementsByClassName('red-heart')[i].children[0].style.display = 'none';
-                document.getElementsByClassName('red-heart')[i].children[1].style.display = 'block';
-            }
-        });
-    });
-    $('.blacklist').each(function(i, e) {
-
-        $(this).click(() => {
-            var visible1 = document.getElementsByClassName('blacklist')[i].children[0].style.display == 'none';
-            let id_client1 = document.getElementsByClassName('blacklist')[i].children[2].value;
-            $.post("client_traitement.php", {
-                visible1: visible1,
-                id_client1: id_client1
-            }, function(resp) {
-                console.log(resp);
-            });
+    //         }, function(resp) {
+    //             console.log(resp);
+    //         });
 
 
-            if (visible1) {
-                document.getElementsByClassName('blacklist')[i].children[0].style.display = 'block';
-                document.getElementsByClassName('blacklist')[i].children[1].style.display = 'none';
-            } else {
-                document.getElementsByClassName('blacklist')[i].children[0].style.display = 'none';
-                document.getElementsByClassName('blacklist')[i].children[1].style.display = 'block';
-            }
-        });
-    });
-    $('.modif').each(async function(i, e) {
-        $(this).click(async () => {
-            document.getElementsByClassName('Zone_modif')[i].style.display = 'block';
-        });
-    });
-    // async function afficher() {
-    //     var x = await $.post('traitement_voiture.php', {}).promise();
-    //     $("#Affichage_voiture .Voitures").html(x);
-    // }
-    // afficher();
-    //--------------Event Click sur l'image Modifier
+    //         if (visible) {
+    //             document.getElementsByClassName('red-heart')[i].children[0].style.display = 'block';
+    //             document.getElementsByClassName('red-heart')[i].children[1].style.display = 'none';
+    //         } else {
+    //             document.getElementsByClassName('red-heart')[i].children[0].style.display = 'none';
+    //             document.getElementsByClassName('red-heart')[i].children[1].style.display = 'block';
+    //         }
+    //     });
+    // });
+    // $('.blacklist').each(function(i, e) {
+
+    //     $(this).click(() => {
+    //         var visible1 = document.getElementsByClassName('blacklist')[i].children[0].style.display == 'none';
+    //         let id_client1 = document.getElementsByClassName('blacklist')[i].children[2].value;
+    //         $.post("client_traitement.php", {
+    //             visible1: visible1,
+    //             id_client1: id_client1
+    //         }, function(resp) {
+    //             console.log(resp);
+    //         });
+
+
+    //         if (visible1) {
+    //             document.getElementsByClassName('blacklist')[i].children[0].style.display = 'block';
+    //             document.getElementsByClassName('blacklist')[i].children[1].style.display = 'none';
+    //         } else {
+    //             document.getElementsByClassName('blacklist')[i].children[0].style.display = 'none';
+    //             document.getElementsByClassName('blacklist')[i].children[1].style.display = 'block';
+    //         }
+    //     });
+    // });
+    // $('.modif').each(async function(i, e) {
+    //     $(this).click(async () => {
+    //         document.getElementsByClassName('Zone_modif')[i].style.display = 'block';
+    //     });
+    // });
+    // // async function afficher() {
+    // //     var x = await $.post('traitement_voiture.php', {}).promise();
+    // //     $("#Affichage_voiture .Voitures").html(x);
+    // // }
+    // // afficher();
+    // //--------------Event Click sur l'image Modifier
 
 
 

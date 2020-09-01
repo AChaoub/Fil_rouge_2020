@@ -176,12 +176,12 @@ include('DB_conn.php');
                 </div>
             </div>
             <div id="autre">
+                <!-- Affichage List -->
                 <div class="Voiture_list">
                     <!-- <div class="Voiture">
                         <div id="img_V"><img src="../IMG/Img_voiture/fiat-500.png" alt=""></div>
                         <div id="Des_VB">
                             <div id="Des_V">
-
                                 <div id="Z1">
                                     <div class="zone_separ_blanc zone_separ"></div>
                                     <p>FIAT 500C</p>
@@ -193,7 +193,7 @@ include('DB_conn.php');
                                     <div id="prix">
                                         <p>PRIX : 250 DHS</p>
                                     </div>
-                                    <div class>
+                                    <div class="BTNRes">
                                         <input type="button" value="RESERVER">
                                     </div>
                                 </div>
@@ -470,7 +470,7 @@ include('DB_conn.php');
                     </div>
                     <div class="zone_separ_blanc zone_separ"></div> -->
                 </div>
-
+                <!-- Affichage Grid -->
                 <div class="Voitures_grid">
                     <!-- <div class="Voiture1">
                         <div id="img">
@@ -986,11 +986,29 @@ include('DB_conn.php');
         </div>
     </div>
     </div>
-    <div id="R4">
-    </div>
+    <!-- <div id="R4">
+    </div> -->
 </form>
 <script>
     $cat_v = "TT";
+    recup();
+    recup2();
+
+    $(".Voiture").each(function(i, e) {
+        $(this).click(() => {
+            console.log("ok");
+        });
+    });
+    // var Btnres = document.getElementsByClassName("BReservation");
+    // for (let i = 0; i < Btnres.length; i++) {
+    //     Btnres[i].addEventListener('click', () => {
+    //         console.log("ok");
+    //         // for (var j = 0; j < disables.length; j++) {
+    //         //     enable(disables[j]);
+    //         // }
+    //     });
+    // }
+
     async function recup() {
         var x = await $.post('affichageFiltre.php', {
             range_1: $("#Rmin").val() * 250,
@@ -1011,10 +1029,6 @@ include('DB_conn.php');
         }).promise();
         $("#autre .Voitures_grid").html(y);
     }
-
-
-    recup();
-    recup2();
     $("#Rmin").on("change", async function() {
         await recup();
         await recup2();
@@ -1039,6 +1053,7 @@ include('DB_conn.php');
         await recup2();
     });
 
+    // Javascript Range function
     (function() {
 
         function addSeparator(nStr) {
@@ -1079,11 +1094,10 @@ include('DB_conn.php');
 
         $('input[type="range"]').on('input', rangeInputChangeEventHandler);
     })();;
+    // function affichage List/grid
     $("#Semi").click(function() {
         $(".Voiture_list").hide();
         $(".Voitures_grid").css("display", "flex");
-
-
     });
     $("#Full").click(function() {
         $(".Voiture_list").css("display", "block");

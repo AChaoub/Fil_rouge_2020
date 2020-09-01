@@ -41,7 +41,7 @@ if ($rows == 0) {
             <img src="../IMG/Img_voiture/' . $ligne['img_v'] . '.png" alt="">
         </div>
         <div id="marque">
-            <p>' . $ligne['descrip'] . '</p>
+            <p>' . $ligne['Modele'] . '</p>
         </div>
     
         <div id="res-Prix">

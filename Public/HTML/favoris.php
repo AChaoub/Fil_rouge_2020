@@ -4,7 +4,7 @@ $conn = new mysqli("localhost", "root", "", "locar");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$sql_fav = " SELECT * FROM favoris";
+$sql_fav = " SELECT * FROM favoris , client where favoris.id_Utilisateur = client.id_Utilisateur ";
 $res_fav = mysqli_query($conn, $sql_fav);
 $rows_fav = mysqli_num_rows($res_fav);
 ?>
@@ -35,10 +35,11 @@ $rows_fav = mysqli_num_rows($res_fav);
             echo '<p style="text-align:center"> Aucun favoris à afficher</p>';
         } else {
             while ($ligne = $res_fav->fetch_assoc()) {
-                echo '
+                if ($ligne['Image_util'] != NULL) {
+                    echo '
                 <div class="cf-results-profil">
                 <div id="Zone_profil_img">
-                    <div><img src="./Public/IMG/Img_Profil/1598234791_IMG_20200108_132052.jpg" alt=""></div>
+                <div><img src="../IMG/Img_Profil/' . $ligne['Image_util'] . '.jpg" style="width:90px;height:80px;" alt=""></div>
                 </div>
                 <div id="Zone_infos">
                     <h3>' . $ligne['Nom'] . '  ' . $ligne['Prenom'] . ' </h3>
@@ -48,30 +49,31 @@ $rows_fav = mysqli_num_rows($res_fav);
                     <h5>' . $ligne['Telephone'] . '</h5>
                     <div class="cf-blank-10"></div>
                 </div>
-                <div id="Zone_icone">
-                    <div class="icone" name="fav">
-                            <div class="cf-results-top-iconBG cf-results-top-heart red-heart"  >
-                                <img  class="BH" src="../IMG/Img_Profil/64px-Ei-heart.png" width="50px" height="auto" alt="" >
-                                <img style="display:none" class="RH" src="../IMG/Img_Profil/heart.png" width="35px" height="auto" alt="">
-                                <input type="hidden" value=' . $ligne['id_Utilisateur'] . '>
-                            </div>
-                            <p class="auto_body_name">Favoris</p>
-                    </div>
-                    <div class="icone" name="blacklist">
-                            <div class="cf-results-top-iconBG cf-results-top-phone blacklist">
-                                <img src="../IMG/Img_Profil/B1.png" class="blacklist_vide"/>
-                                <img style="display:none" src="../IMG/Img_Profil/B2.png" />
-                                <input type="hidden" value=' . $ligne['id_Utilisateur'] . '>
-                            </div>
-                            <p class="auto_body_name">Blacklist</p>
-                    </div>
-
-                </div>
-
+                
             </div>
             <div class="cf-blank-10"></div>
         <div class="cf-blank-10"></div>
         <div class="cf-blank-10"></div>';
+                } else {
+                    echo '
+                <div class="cf-results-profil">
+                <div id="Zone_profil_img">
+                <div><img src="../IMG/Img_Profil/logo1233.png" style="width:90px;height:80px;" alt=""></div>
+                </div>
+                <div id="Zone_infos">
+                    <h3>' . $ligne['Nom'] . '  ' . $ligne['Prenom'] . ' </h3>
+                    <div class="cf-blank-10"></div>
+                    <h5>' . $ligne['Email'] . ' </h5>
+                    <div class="cf-blank-10"></div>
+                    <h5>' . $ligne['Telephone'] . '</h5>
+                    <div class="cf-blank-10"></div>
+                </div>
+                
+            </div>
+            <div class="cf-blank-10"></div>
+        <div class="cf-blank-10"></div>
+        <div class="cf-blank-10"></div>';
+                }
             }
         }
         ?>

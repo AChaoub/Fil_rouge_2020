@@ -43,26 +43,25 @@ if ($rows == 0) {
     while ($ligne = $resultat->fetch_assoc()) {
 
         echo '<div class="Voiture">
-            <div id="img_V"><img src="../IMG/Img_voiture/' . $ligne['img_v'] . '.png" alt=""></div>
-            <div id="Des_VB">
-                <div id="Des_V">
-    
+            <div class="img_V"><img src="../IMG/Img_voiture/' . $ligne['img_v'] . '.png" alt=""></div>
+            <div class="Des_VB">
+                <div class="Des_V">
                     <div id="Z1">
                         <div class="zone_separ_blanc zone_separ"></div>
-                        <p>FIAT 500C</p>
+                        <p>' . $ligne['Modele'] . '</p>
                         <div class="zone_separ_blanc zone_separ"></div>
-                        <span>' . $ligne['descrip'] . '</span>
+                        <span class="spanDes">' . $ligne['descrip'] . '</span>
                     </div>
-                    <div id="Z2">
-                        <div id="prix">
+                    <div class=" Z2 val_id" value="' . $ligne['id_V'] . '">
+                        <div class="prix">
                             <p>PRIX : ' . $ligne['prix'] . ' DHS</p>
                         </div>
-                        <div class>
-                            <input type="button" value="RESERVER">
+                        <div class="BReservation">
+                            <input  type="button" value="RESERVER">
                         </div>
                     </div>
                 </div>
-                <div id="Des_B">
+                <div class="Des_B">
                     <div class="Icones">
                         <div class="icone" id="icone1">
                             <div class="imgI">

@@ -396,7 +396,7 @@ $color1:#FF5F00;
                     @include FlexR();
                     height: 300px;
 
-                    #img_V {
+                    .img_V {
                         width: 30%;
                         background-color: $color1;
                         @include Centrer();
@@ -408,12 +408,12 @@ $color1:#FF5F00;
                         }
                     }
 
-                    #Des_VB {
+                    .Des_VB {
                         width: 70%;
                         height: 300px;
                         @include FlexC();
 
-                        #Des_V {
+                        .Des_V {
                             width: 100%;
                             height: 200px;
                             background-color: white;
@@ -430,16 +430,20 @@ $color1:#FF5F00;
                             #Z1 {
                                 width: 70%;
                                 padding: 0 5%;
+
+                                .spanDes {
+                                    color: black;
+                                }
                             }
 
-                            #Z2 {
+                            .Z2 {
                                 // background-color: blue;
                                 width: 30%;
                                 @include FlexR();
                                 @include Centrer();
                                 border: solid 2px $color;
 
-                                #prix {
+                                .prix {
                                     background-color: white;
 
                                 }
@@ -474,7 +478,7 @@ $color1:#FF5F00;
 
                         }
 
-                        #Des_B {
+                        .Des_B {
                             width: 100%;
                             height: 100px;
                             @include FlexR();
@@ -682,4 +686,3 @@ $color1:#FF5F00;
         height: 400px;
     }
 }
-

@@ -58,28 +58,6 @@ $ligne  = mysqli_num_rows($res_v);
 // }
 
 while ($ligne = $res_v->fetch_assoc()) {
-    echo '
-                        <div class="Voiture">
-                            <div class="img_v" >
-                                <img src="../IMG/Img_voiture/fiat-500.png" width="80px" height="auto" alt="">
-                            </div>
-                            <div class="Modele"><p>Achraf</p></div>
-                            <div class="Btns">
-                                <div class="modif" value=""><img  src="../IMG/Img_voiture/pencil.png" />
-                                </div>
-                                <div class="effacer" value=""><img  src="../IMG/Img_voiture/delete.png" />
-                                </div>
-                                <input class="id" type="hidden" value=' . $ligne['id_V'] . '>
-                            </div>
-                            <div class="Zone_modif" style="display: none;">
-                            <div class="cf-blank-10"></div>
-                            <p>Prix : </p>
-                            <input class="prix" type="text" value="' . $ligne['prix'] . '">
-                            <div class="cf-blank-10"></div>
-                            <input class="btnmodif" type="button" value="Modifier">
-                            </div>
-                        </div>
-                    ';
 } ?>
 
 <div class="Voiture">
