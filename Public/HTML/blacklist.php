@@ -35,10 +35,11 @@ $rows_bl = mysqli_num_rows($res_bl);
             echo '<p style="text-align:center">Aucun blacklist à afficher</p>';
         } else {
             while ($ligne_bl = $res_bl->fetch_assoc()) {
-                echo '
+                if ($ligne_bl['Image_util'] != NULL) {
+                    echo '
                 <div class="cf-results-profil">
                 <div id="Zone_profil_img">
-                    <div><img src="./Public/IMG/Img_Profil/1598234791_IMG_20200108_132052.jpg" alt=""></div>
+                <div><img src="../IMG/Img_Profil/' . $ligne_bl['Image_util'] . '.jpg" style="width:90px;height:80px;" alt=""></div>
                 </div>
                 <div id="Zone_infos">
                     <h3>' . $ligne_bl['Nom'] . '  ' . $ligne_bl['Prenom'] . ' </h3>
@@ -49,11 +50,30 @@ $rows_bl = mysqli_num_rows($res_bl);
                     <div class="cf-blank-10"></div>
                 </div>
                 
-
             </div>
             <div class="cf-blank-10"></div>
         <div class="cf-blank-10"></div>
         <div class="cf-blank-10"></div>';
+                } else {
+                    echo '
+                <div class="cf-results-profil">
+                <div id="Zone_profil_img">
+                <div><img src="../IMG/Img_Profil/logo1233.png" style="width:90px;height:80px;" alt=""></div>
+                </div>
+                <div id="Zone_infos">
+                    <h3>' . $ligne_bl['Nom'] . '  ' . $ligne_bl['Prenom'] . ' </h3>
+                    <div class="cf-blank-10"></div>
+                    <h5>' . $ligne_bl['Email'] . ' </h5>
+                    <div class="cf-blank-10"></div>
+                    <h5>' . $ligne_bl['Telephone'] . '</h5>
+                    <div class="cf-blank-10"></div>
+                </div>
+                
+            </div>
+            <div class="cf-blank-10"></div>
+        <div class="cf-blank-10"></div>
+        <div class="cf-blank-10"></div>';
+                }
             }
         }
         ?>
@@ -82,7 +102,7 @@ $rows_bl = mysqli_num_rows($res_bl);
 
 <!-- script -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<script>
+<!-- <script>
     $('.red-heart').each(function(i, e) {
 
         $(this).click(() => {
@@ -129,4 +149,4 @@ $rows_bl = mysqli_num_rows($res_bl);
             }
         });
     });
-</script>
+</script> -->

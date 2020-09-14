@@ -388,7 +388,8 @@ $color1:#FF5F00;
             width: 100%;
             height: auto;
 
-            .Voiture_list {
+            .Voiture_list,
+            #Zone_res {
                 width: 100%;
                 height: auto;
 
@@ -433,6 +434,11 @@ $color1:#FF5F00;
 
                                 .spanDes {
                                     color: black;
+                                }
+
+                                .dateR,
+                                .DateD {
+                                    height: 30px;
                                 }
                             }
 

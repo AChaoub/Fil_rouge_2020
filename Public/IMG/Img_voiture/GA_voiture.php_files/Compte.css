@@ -9,6 +9,13 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -512,13 +519,6 @@ body {
   position: absolute;
   top: 0;
   z-index: 188;
-}
-
-#sincrire #ajout_voiture {
-  width: 90%;
-  height: 90%;
-  margin: 0 auto;
-  background-color: chartreuse;
 }
 
 #sincrire #logoInscrip {
@@ -1107,14 +1107,12 @@ body {
   height: auto;
 }
 
-#R2 #Zone_Res #autre .Voiture_list,
-#R2 #Zone_Res #autre #Zone_res {
+#R2 #Zone_Res #autre .Voiture_list {
   width: 100%;
   height: auto;
 }
 
-#R2 #Zone_Res #autre .Voiture_list .Voiture,
-#R2 #Zone_Res #autre #Zone_res .Voiture {
+#R2 #Zone_Res #autre .Voiture_list .Voiture {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1127,8 +1125,7 @@ body {
   height: 300px;
 }
 
-#R2 #Zone_Res #autre .Voiture_list .Voiture .img_V,
-#R2 #Zone_Res #autre #Zone_res .Voiture .img_V {
+#R2 #Zone_Res #autre .Voiture_list .Voiture .img_V {
   width: 30%;
   background-color: #FF5F00;
   display: -webkit-box;
@@ -1142,14 +1139,12 @@ body {
           justify-content: center;
 }
 
-#R2 #Zone_Res #autre .Voiture_list .Voiture .img_V img,
-#R2 #Zone_Res #autre #Zone_res .Voiture .img_V img {
+#R2 #Zone_Res #autre .Voiture_list .Voiture .img_V img {
   width: 100%;
   height: auto;
 }
 
-#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB,
-#R2 #Zone_Res #autre #Zone_res .Voiture .Des_VB {
+#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB {
   width: 70%;
   height: 300px;
   display: -webkit-box;
@@ -1163,8 +1158,7 @@ body {
       flex-wrap: wrap;
 }
 
-#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_V,
-#R2 #Zone_Res #autre #Zone_res .Voiture .Des_VB .Des_V {
+#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_V {
   width: 100%;
   height: 200px;
   background-color: white;
@@ -1179,33 +1173,27 @@ body {
       flex-wrap: wrap;
 }
 
-#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_V p,
-#R2 #Zone_Res #autre #Zone_res .Voiture .Des_VB .Des_V p {
+#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_V p {
   color: black;
   font-size: 18px;
   font-weight: 900;
 }
 
-#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_V #Z1,
-#R2 #Zone_Res #autre #Zone_res .Voiture .Des_VB .Des_V #Z1 {
+#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_V .Z1 {
   width: 70%;
   padding: 0 5%;
 }
 
-#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_V #Z1 .spanDes,
-#R2 #Zone_Res #autre #Zone_res .Voiture .Des_VB .Des_V #Z1 .spanDes {
+#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_V .Z1 .spanDes {
   color: black;
 }
 
-#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_V #Z1 .dateR,
-#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_V #Z1 .DateD,
-#R2 #Zone_Res #autre #Zone_res .Voiture .Des_VB .Des_V #Z1 .dateR,
-#R2 #Zone_Res #autre #Zone_res .Voiture .Des_VB .Des_V #Z1 .DateD {
+#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_V .Z1 .dateR,
+#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_V .Z1 .DateD {
   height: 30px;
 }
 
-#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_V .Z2,
-#R2 #Zone_Res #autre #Zone_res .Voiture .Des_VB .Des_V .Z2 {
+#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_V .Z2 {
   width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1226,13 +1214,11 @@ body {
   border: solid 2px #FF5F00;
 }
 
-#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_V .Z2 .prix,
-#R2 #Zone_Res #autre #Zone_res .Voiture .Des_VB .Des_V .Z2 .prix {
+#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_V .Z2 .prix {
   background-color: white;
 }
 
-#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_V .Z2 div,
-#R2 #Zone_Res #autre #Zone_res .Voiture .Des_VB .Des_V .Z2 div {
+#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_V .Z2 div {
   width: 60%;
   height: 50px;
   background-color: #FF5F00;
@@ -1247,15 +1233,13 @@ body {
           justify-content: center;
 }
 
-#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_V .Z2 div p,
-#R2 #Zone_Res #autre #Zone_res .Voiture .Des_VB .Des_V .Z2 div p {
+#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_V .Z2 div p {
   color: #FF5F00;
   font-size: 18px;
   text-align: center;
 }
 
-#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_V .Z2 div input,
-#R2 #Zone_Res #autre #Zone_res .Voiture .Des_VB .Des_V .Z2 div input {
+#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_V .Z2 div input {
   height: 40px;
   width: 100%;
   background-color: #FF5F00;
@@ -1266,8 +1250,7 @@ body {
   cursor: pointer;
 }
 
-#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_B,
-#R2 #Zone_Res #autre #Zone_res .Voiture .Des_VB .Des_B {
+#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_B {
   width: 100%;
   height: 100px;
   display: -webkit-box;
@@ -1281,14 +1264,12 @@ body {
       flex-wrap: wrap;
 }
 
-#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_B .Icones,
-#R2 #Zone_Res #autre #Zone_res .Voiture .Des_VB .Des_B .Icones {
+#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_B .Icones {
   width: 20%;
   margin-left: 5%;
 }
 
-#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_B .Icones .icone,
-#R2 #Zone_Res #autre #Zone_res .Voiture .Des_VB .Des_B .Icones .icone {
+#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_B .Icones .icone {
   border-radius: 10px;
   width: 100%;
   display: -webkit-box;
@@ -1307,8 +1288,7 @@ body {
   -o-border-radius: 10px;
 }
 
-#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_B .Icones .icone .imgI,
-#R2 #Zone_Res #autre #Zone_res .Voiture .Des_VB .Des_B .Icones .icone .imgI {
+#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_B .Icones .icone .imgI {
   width: 30%;
   height: 100px;
   display: -webkit-box;
@@ -1322,20 +1302,17 @@ body {
           justify-content: center;
 }
 
-#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_B .Icones .icone .imgI img,
-#R2 #Zone_Res #autre #Zone_res .Voiture .Des_VB .Des_B .Icones .icone .imgI img {
+#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_B .Icones .icone .imgI img {
   width: 30px;
   height: auto;
 }
 
-#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_B .Icones .icone .pI,
-#R2 #Zone_Res #autre #Zone_res .Voiture .Des_VB .Des_B .Icones .icone .pI {
+#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_B .Icones .icone .pI {
   width: 70%;
   margin: auto 0;
 }
 
-#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_B .Icones .icone .pI p,
-#R2 #Zone_Res #autre #Zone_res .Voiture .Des_VB .Des_B .Icones .icone .pI p {
+#R2 #Zone_Res #autre .Voiture_list .Voiture .Des_VB .Des_B .Icones .icone .pI p {
   font-size: 16px;
   color: #FF5F00;
   font-weight: 600;
@@ -1528,4 +1505,160 @@ body {
   background-color: crimson;
   height: 400px;
 }
-/*# sourceMappingURL=reservation.css.map */
+
+#Pub {
+  width: 100%;
+  height: auto;
+}
+
+#Pub img {
+  width: 100%;
+  height: auto;
+}
+
+#Pub2 {
+  width: 100%;
+  height: auto;
+}
+
+#Pub2 img {
+  height: auto;
+}
+
+#Compte {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#Compte #C1 {
+  width: 30%;
+  height: 700px;
+  top: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: #FF5F00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#Compte #C1 #Div_img {
+  width: 100%;
+  height: 150px;
+  background-color: #FF5F00;
+}
+
+#Compte #C1 #Div_img #img1 {
+  width: 30%;
+  margin: 20px auto;
+}
+
+#Compte #C1 #Div_img #img1 img {
+  width: auto;
+  height: auto;
+}
+
+#Compte #C1 #Infos {
+  width: 100%;
+  height: auto;
+  background-color: wheat;
+}
+
+#Compte #C1 #Infos .Info {
+  width: 100%;
+  height: 70px;
+  background-color: #FF5F00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#Compte #C1 #Infos .Info .Info1,
+#Compte #C1 #Infos .Info .RempInfos1 {
+  width: 50%;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#Compte #C1 #Infos .Info .Info1 p,
+#Compte #C1 #Infos .Info .RempInfos1 p {
+  font-size: 18px;
+  font-weight: 800;
+  color: white;
+  text-align: center;
+}
+
+#Compte #C1 #btnDec {
+  width: 90%;
+  height: 40px;
+  margin: 100px auto;
+}
+
+#Compte #C1 #btnDec input {
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(255, 68, 0, 0.349);
+  border: solid 5px white;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+
+#Compte #Liste_reservation {
+  width: 70%;
+  height: auto;
+  background-color: cadetblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  justify-items: center;
+}
+
+#Compte #Liste_reservation .Zone_res {
+  width: 100%;
+  height: 200px;
+  background-color: chartreuse;
+}
+/*# sourceMappingURL=Compte.css.map */

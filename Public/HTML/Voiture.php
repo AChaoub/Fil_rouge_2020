@@ -8,6 +8,59 @@ $sql_v = " SELECT * FROM voiture";
 $res_v = mysqli_query($conn, $sql_v);
 $rows_v = mysqli_num_rows($res_v);
 ?>
+<div id="sincrire" style="display: block;">
+    <div id="ajout_voiture" style="width: 90%;
+        height: 90%;
+        margin-left: 5% ;
+        margin-top : 2.5%;
+        background-color: chartreuse;">
+        <div style="display :flex ; justify-content: center;
+        align-items: center;">
+            <div>
+                <img src="" alt="">
+            </div>
+            <input type="file">
+        </div>
+        <div>
+            <p>Categorie : </p>
+            <Select>
+                <option value="MINI"></option>
+                <option value="SEDAN"></option>
+                <option value="COUPE"></option>
+                <option value="PICKUP"></option>
+                <option value="LUXE"></option>
+            </Select>
+        </div>
+        <div>
+            <p>MODELE: </p>
+            <input type='text'>
+        </div>
+        <div>
+            <p>PRIX</p>
+            <input type='text'>
+        </div>
+        <div>
+            <p>Portes</p>
+            <input type='text'>
+        </div>
+        <div>
+            <p>Transmission</p>
+            <input type="radio">
+            <label for="">A</label>
+            <input type="radio">
+            <label for="" value>M</label>
+        </div>
+        <div>
+            <p>Climatisation</p>
+            <input type='text'>
+        </div>
+        <div>
+            <input type="button" value="AJOUTER">
+        </div>
+
+    </div>
+</div>
+
 
 <div class="cf-blank-50"></div>
 <div class="container-custom cf-container-custom">
@@ -18,7 +71,7 @@ $rows_v = mysqli_num_rows($res_v);
         </div>
     </section>
     <div class="cf-blank-10"></div>
-    <!-- Zone Nombre Clients -->
+    <!-- Zone Nombre voitures -->
     <section class="NB_client-section">
         <div class="count_cl">
             <div class="count_cl_nbr"><?php echo $rows_v . '&nbsp' ?></div> <!-- &nbsp espace-->
@@ -28,7 +81,7 @@ $rows_v = mysqli_num_rows($res_v);
 
     <div class="cf-blank-10"></div>
 
-    <!-- Liste des contacts d'un admin precis -->
+    <!-- Liste des voitures -->
     <section class="cf-results-section"></section>
     <?php
     if ($rows_v < 1) {
@@ -36,45 +89,13 @@ $rows_v = mysqli_num_rows($res_v);
     } else {
         echo '<div id="Affichage_voiture" >
                     <div class="Voitures">';
-        while ($ligne = $res_v->fetch_assoc()) {
-            echo '
-            <div class="Voiture">
-                <div class="img_v" >
-                    <img src="../IMG/Img_voiture/' . $ligne['img_v'] . '.png" width="80px" height="auto" alt="">
-                </div>
-                <div class="Modele"><p> ' . $ligne['Modele'] . '</p></div>
-                <div class="Btns">
-                    <div class="modif" value=""><img  src="../IMG/Img_voiture/pencil.png" />
-                    </div>
-                    <div class="effacer" value=""><img  src="../IMG/Img_voiture/delete.png" />
-                    </div>
-                    <input class="id" type="hidden" value=' . $ligne['id_V'] . '>
-                </div>
-                <div class="Zone_modif" style="display: none;">
-                <div class="cf-blank-10"></div>
-                <p>Prix : </p>
-                <input class="prix" type="text" value="' . $ligne['prix'] . '">
-                <div class="cf-blank-10"></div>
-                <input class="btnmodif" type="button" value="Modifier">
-                </div>
-            </div>
-        ';
-        } ?>
+    ?>
 
         <div class="Voiture">
             <div class="img_ajout">
                 <img src="../IMG/Img_voiture/ajout.png" width="80px" height="auto" alt="">
             </div>
-            <!-- <div class="Btns">
-                                <div class="modif" value=""><img style="display:none" src="../IMG/Img_Profil/B2.png" />
-                                </div>
-                                <div class="effacer" value=""><img style="display:none" src="../IMG/Img_Profil/B2.png" />
-                                </div>
-                            </div>
-                        </div> -->
-
         </div>
-
 </div>
 
 <?php
@@ -107,97 +128,10 @@ $rows_v = mysqli_num_rows($res_v);
 <!-- script -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 <script>
-    // $('.red-heart').each(function(i, e) {
-
-    //     $(this).click(() => {
-    //         let visible = document.getElementsByClassName('red-heart')[i].children[0].style.display == 'none';
-    //         let id_client = document.getElementsByClassName('red-heart')[i].children[2].value;
-    //         // console.log(id_client);
-    //         $.post("client_traitement.php", {
-    //             visible: visible,
-    //             id_client: id_client
-
-    //         }, function(resp) {
-    //             console.log(resp);
-    //         });
-
-
-    //         if (visible) {
-    //             document.getElementsByClassName('red-heart')[i].children[0].style.display = 'block';
-    //             document.getElementsByClassName('red-heart')[i].children[1].style.display = 'none';
-    //         } else {
-    //             document.getElementsByClassName('red-heart')[i].children[0].style.display = 'none';
-    //             document.getElementsByClassName('red-heart')[i].children[1].style.display = 'block';
-    //         }
-    //     });
-    // });
-    // $('.blacklist').each(function(i, e) {
-
-    //     $(this).click(() => {
-    //         var visible1 = document.getElementsByClassName('blacklist')[i].children[0].style.display == 'none';
-    //         let id_client1 = document.getElementsByClassName('blacklist')[i].children[2].value;
-    //         $.post("client_traitement.php", {
-    //             visible1: visible1,
-    //             id_client1: id_client1
-    //         }, function(resp) {
-    //             console.log(resp);
-    //         });
-
-
-    //         if (visible1) {
-    //             document.getElementsByClassName('blacklist')[i].children[0].style.display = 'block';
-    //             document.getElementsByClassName('blacklist')[i].children[1].style.display = 'none';
-    //         } else {
-    //             document.getElementsByClassName('blacklist')[i].children[0].style.display = 'none';
-    //             document.getElementsByClassName('blacklist')[i].children[1].style.display = 'block';
-    //         }
-    //     });
-    // });
-    // $('.modif').each(async function(i, e) {
-    //     $(this).click(async () => {
-    //         document.getElementsByClassName('Zone_modif')[i].style.display = 'block';
-    //     });
-    // });
-    // // async function afficher() {
-    // //     var x = await $.post('traitement_voiture.php', {}).promise();
-    // //     $("#Affichage_voiture .Voitures").html(x);
-    // // }
-    // // afficher();
-    // //--------------Event Click sur l'image Modifier
-
-
-
-    //--------------Event Click pour valider La modification du prix d'une voiture X
-    $('.btnmodif').each(function(i, e) {
-
-        $(this).click(() => {
-            let id_v = document.getElementsByClassName('Btns')[i].children[2].value;
-            let prix = document.getElementsByClassName('prix')[i].value;
-            document.getElementsByClassName('Zone_modif')[i].style.display = 'none';
-            $.post("traitement_voiture.php", {
-                id_v: id_v,
-                prix: prix
-            }, function(resp) {
-                console.log(resp);
-            });
-            // await afficher();
-        });
-    });
-
-    //------------ suppression voiture avec id selectionne
-    $('.effacer').each(async function(i, e) {
-        $(this).click(async () => {
-
-                let id_supp = document.getElementsByClassName('Btns')[i].children[2].value;
-                console.log(id_supp);
-                $.post("traitement_voiture.php", {
-                    id_supp: id_supp,
-                });
-            },
-            function(resp) {
-                console.log(resp);
-            });
-        // await afficher();
-    });
-    //-------------ajax
+    ////// Le code s'excute quand je ignore la fonction afficher et elle marche quand j'utilise affichage standard ----> prob de async et await 
+    async function afficher() {
+        var x = await $.post('traitement_voiture.php', {}).promise();
+        $("#Affichage_voiture .Voitures").html(x);
+    }
+    afficher();
 </script>

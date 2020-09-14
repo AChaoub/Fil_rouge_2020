@@ -44,7 +44,8 @@
                     <p>AGE</p>
                 </div>
                 <div class="RempInfos1" id="Adresse">
-                    <p><?php echo (2020 - $ligne_client['Annee'] . '&nbsp ANS');  ?></p>
+                    <p><?php if ($ligne_client['Annee']) echo (2020 - $ligne_client['Annee'] . '&nbsp ANS');
+                        else echo ('information indisponible');   ?></p>
                 </div>
             </div>
             <div class="Info">
@@ -61,9 +62,47 @@
         </div>
 
     </div>
-    <div id="C2">
+    <div id="Liste_reservation">
+        <?php
+        $sql_res_client = "SELECT * FROM voiture AS v ,client AS C ,reservation AS r WHERE C.id_Utilisateur = R.id_Utilisateur AND R.id_V = V.id_V AND R.id_Utilisateur  = $id_c";
+        $resultat = $conn->query($sql_res_client);
+        while ($ligne_res_client = $resultat->fetch_assoc()) {
 
+            echo '
+        <div class="Zone_res">
+        <div class="Voiture">
+        <div class="img_V"><img src="../IMG/Img_voiture/' . $ligne_res_client['img_v'] . '.png" alt=""></div>
+        <div class="Des_VB">
+            <div class="Des_V">
+                <div id="Z1">
+                    <div class="zone_separ_blanc zone_separ"></div>
+                    <p>' . $ligne_res_client['Modele'] . '</p>
+                    <div class="zone_separ_blanc zone_separ"></div>
+                    <span class="spanDes">' . $ligne_res_client['descrip'] . '</span>
+                    <div class="blank"></div>
+                    <p>DATE DEPART : </p>
+                    <input value="' . $ligne_res_client['date_Depart'] . '" type="text" >
+                    <p>DATE RETOUR : </p>
+                    <input value="' . $ligne_res_client['date_Retour'] . '" type="text" ">
+
+                </div>
+                <div class=" Z2 val_id">
+                    <div class="prix">
+                        <p>PRIX : ' . $ligne_res_client['prix'] . ' DHS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>';
+        }
+        ?>
 
     </div>
+    <div class="blank"></div>
+    <div class="Zone_res"></div>
+
+
+
+</div>
 
 </div>

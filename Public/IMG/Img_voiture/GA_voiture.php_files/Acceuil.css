@@ -508,13 +508,6 @@ body {
   z-index: 188;
 }
 
-#sincrire #ajout_voiture {
-  width: 90%;
-  height: 90%;
-  margin: 0 auto;
-  background-color: chartreuse;
-}
-
 #sincrire #logoInscrip {
   width: 60%;
   height: 100px;

@@ -6,9 +6,9 @@
     </div>
     <div class="zone_separ zone_separ_noir"></div>
     <div id="Slides_Car">
-        <div class="Navig">
+        <!-- <div class="Navig">
             <div class="Navig1"><img src="../IMG/Img_Site/return.png" alt=""></div>
-        </div>
+        </div> -->
         <div id="InfosCar1">
             <p id='Categorie'>Confort</p>
             <p class="P_infos">VOLVO V6</p>
@@ -58,9 +58,9 @@
                 <span>OUI</span>
             </div>
         </div>
-        <div class="Navig">
+        <!-- <div class="Navig">
             <div class="Navig1"><img src="../IMG/Img_Site/right-arrow.png" alt=""></div>
-        </div>
+        </div> -->
     </div>
     <div id="Recherche">
         <div id="Parag1">
@@ -68,8 +68,7 @@
         </div>
         <div class="zone_separ zone_separ_color"></div>
         <div id="inputs">
-
-            <select name="Categorie" Class="Select">
+            <!-- <select name="Categorie" Class="Select Categorie">
                 <option value="">CATEGORIE</option>
                 <option value="dog"><img src="../IMG/Img_Site/p02.png" alt=""></option>
                 <option value="cat">Cat</option>
@@ -77,16 +76,11 @@
                 <option value="parrot">Parrot</option>
                 <option value="spider">Spider</option>
                 <option value="goldfish">Goldfish</option>
-            </select>
-            <select name="Categorie" Class="Select">
-                <option value="">MODELE</option>
-                <option value="dog"><img src="../IMG/Img_Site/p02.png" alt=""></option>
-                <option value="cat">Cat</option>
-                <option value="hamster">Hamster</option>
-                <option value="parrot">Parrot</option>
-                <option value="spider">Spider</option>
-                <option value="goldfish">Goldfish</option>
-            </select>
+            </select> -->
+
+            <!-- <select name="Modele" Class="Select Modele">
+                <option value="Modele">MODELE</option>
+            </select> -->
             <div class="zone_separ zone_separ_color"></div>
             <div class="input_container">
                 <span id="sp1" class="input_icon"><img src="../IMG/Img_Site/calendar (3).png" aria-hidden="true"></img></span>
@@ -136,9 +130,9 @@
     </div>
     <div class="zone_separ zone_separ_blanc"></div>
     <div id="Services">
-        <div class="Navig">
+        <!-- <div class="Navig">
             <div class="Navig1"><img src="../IMG/Img_Site/return.png" alt=""></div>
-        </div>
+        </div> -->
         <!-- <div class='Zone'>
             <div id="descrip_S">
                 <p>FUEL PLANS</p>
@@ -161,9 +155,9 @@
             </div>
         </div>
 
-        <div class="Navig">
+        <!-- <div class="Navig">
             <div class="Navig1"><img src="../IMG/Img_Site/right-arrow.png" alt=""></div>
-        </div>
+        </div> -->
     </div>
 </div>
 <div class="zone_separ zone_separ_blanc"></div>
@@ -184,15 +178,13 @@
                 </p>
             </div>
             <div>
-                <div class="Navig">
+                <!-- <div class="Navig">
                     <div class="Navig1"><img src="../IMG/Img_Site/right-arrow.png" alt=""></div>
                 </div>
                 <div class="Navig">
                     <div class="Navig1"><img src="../IMG/Img_Site/return.png" alt=""></div>
-                </div>
-
+                </div> -->
             </div>
-
         </div>
         <div id="Zone_img_p"></div>
     </div>
@@ -240,3 +232,22 @@
 
 <div class="blank"></div>
 <div class="blank"></div>
+<script>
+    async function remplissage_Select_Mod() {
+        var x = await $.post('Remplissage_Modele.php', {
+            categorie: $(".Categorie").val()
+        }).promise();
+        $("#inputs").html(x);
+    }
+    async function rem() {
+        $.post("Remplissage_Modele.php", {
+            cat: $(".Categorie").val()
+        }, function(resp) {
+            console.log(resp);
+        });
+    }
+    remplissage_Select_Mod();
+    // $(".Categorie").on("change", async function() {
+    //     rem();
+    // });
+</script>

@@ -126,14 +126,4 @@
   font-size: 18px;
   font-weight: 700;
 }
-
-#PopUp_ajout_voiture {
-  display: block;
-  width: 80%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.808);
-  position: absolute;
-  top: 0;
-  z-index: 188;
-}
 /*# sourceMappingURL=GA_voiture.css.map */

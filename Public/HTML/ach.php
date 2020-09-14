@@ -1,5 +1,6 @@
+
 <?php
 include('Header_client.php');
-include('Res_Client.php');
+include('UploadProfile.php');
 include('footer.php');
-include('script.php');
+include('Script.php');

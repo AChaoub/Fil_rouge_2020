@@ -990,25 +990,17 @@ include('DB_conn.php');
     </div> -->
 </form>
 <script>
+    //fonction Insert 
+    async function Insert_res(id_voiture) {
+        var y = await $.post('traitement_reservation.php', {
+            id_voiture: id_voiture,
+            dateD: $("#ReservDate_D_" + id_voiture).val(), // la valeur d' id ReservDate_D_"Parametre fonction"
+            dateR: $("#ReservDate_R_" + id_voiture).val() // Mm commentaire.
+        }).promise();
+
+        window.location.href = "compte.php";
+    }
     $cat_v = "TT";
-    recup();
-    recup2();
-
-    $(".Voiture").each(function(i, e) {
-        $(this).click(() => {
-            console.log("ok");
-        });
-    });
-    // var Btnres = document.getElementsByClassName("BReservation");
-    // for (let i = 0; i < Btnres.length; i++) {
-    //     Btnres[i].addEventListener('click', () => {
-    //         console.log("ok");
-    //         // for (var j = 0; j < disables.length; j++) {
-    //         //     enable(disables[j]);
-    //         // }
-    //     });
-    // }
-
     async function recup() {
         var x = await $.post('affichageFiltre.php', {
             range_1: $("#Rmin").val() * 250,
@@ -1029,6 +1021,8 @@ include('DB_conn.php');
         }).promise();
         $("#autre .Voitures_grid").html(y);
     }
+    recup();
+    recup2();
     $("#Rmin").on("change", async function() {
         await recup();
         await recup2();
